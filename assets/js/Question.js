@@ -98,54 +98,20 @@ const questions = [
     },
 ];
 
-var button1 = document.getElementById("0");
-var button2 = document.getElementById("1");
-var button3 = document.getElementById("2");
-var button4 = document.getElementById("3");
+const button1 = document.getElementById("0");
+const button2 = document.getElementById("1");
+const button3 = document.getElementById("2");
+const button4 = document.getElementById("3");
 
-
-
-function r(intero) {
-    let array= [];
-   
-    do {
-        let random = Math.floor(Math.random() * 4);
-        if (!array.includes(random)) {
-
-            array.push(random);
-            
-        }
-
-       
-    } while (array.length<4);
-    
-    return array;
-
-    
-}
-
-
-
-function RandomQuestion(_Question) {
-    let array=r();
-    let question = _Question;
-    let incorrect;
-
-
-    let rand = Math.floor(Math.random() * question.length);
-  
-    for (let i = 0; i < question.length; i++) {
-        incorrect = question[rand].incorrect_answers;
-        console.log(incorrect);
-        
-        button1.textContent = question[rand].correct_answer;
-
-        button2.textContent = incorrect[array[1]];
-        button3.textContent = incorrect[array[2]];
-        button4.textContent = incorrect[array[3]];
-
+function getRandomNumbers(length) {
+    if(!length) {
+        return;
     }
-  
-}
+    let set = new Set();
+    while (set.size <= length) {
+      set.add(Math.floor(Math.random() * (length + 1)));
+    }
+    return set;
+  }
 
-RandomQuestion(questions);
+console.log(getRandomNumbers(5));
