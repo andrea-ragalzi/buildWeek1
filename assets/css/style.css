@@ -1,0 +1,142 @@
+html{
+height: 100%;
+background-image: url(../image/bg.jpg);
+background-repeat: no-repeat;
+background-size:cover;
+}
+
+#head{
+    width: 100%;
+    
+}
+
+#Logo{
+    width: 15%;
+
+}
+
+
+
+
+#container{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10%;
+    text-align: center;
+    color:white;
+}
+
+h2{
+    font-size: 2em;
+    width: 40%;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.774);
+}
+strong{
+    color: white;
+}
+
+
+#countdown{
+    text-align: right;
+
+}
+
+#table{
+margin: 0 auto;
+margin-top: 10%;
+
+}
+
+
+.Button{
+    background-color: rgba(196, 190, 190, 0.178);
+    border: 0.2em solid rgba(221, 221, 221, 0.658);
+    border-style:outset;
+    border-radius: 30px;
+    color: white;
+    width: 20em;
+    height: 5em;
+}
+
+
+#Question{
+    margin-top: 5%;
+}
+
+#totale{
+    color:rgba(255, 0, 0, 0.575);
+}
+
+.testo{
+display: contents;
+position: absolute;
+}
+
+#app{
+   width: 100%;
+    position: fixed;
+    left:80%;
+    bottom:80%;
+    }
+    
+
+
+
+
+
+.base-timer {
+    
+    right: 10%;
+    width: 6em;
+    height: 6em;
+  }
+  
+  .base-timer__svg {
+    transform: scaleX(-1);
+  }
+  
+  .base-timer__circle {
+   
+  fill: none;
+  stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 8px;
+    stroke: grey;
+  }
+  
+  .base-timer__path-remaining {
+    stroke-width: 10px;
+    stroke-linecap: round;
+    transform:scaleY(-1) rotate(265deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+  }
+  
+  .base-timer__path-remaining.green {
+    color: rgb(187, 17, 209);
+  }
+  
+  .base-timer__path-remaining.orange {
+    color: orange;
+  }
+  
+  .base-timer__path-remaining.red {
+    color: red;
+  }
+  
+  .base-timer__label {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    bottom: 2.5em;
+    left: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+  }
