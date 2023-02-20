@@ -1,0 +1,47 @@
+
+html{
+    size: 100%;
+    height: 100%;
+    background-image:url(../imgs/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: larger;
+}
+div{
+    width: 40rem;
+}
+.bg{
+    margin: 0 auto;
+  width: 50%;
+  padding: 10px;
+  padding-top: 5%;
+}
+
+.epilogo{
+    width: 150px;
+    padding-bottom: 50px;
+}
+span{
+    width: min-content;
+    border:2px solid white;
+}
+
+.prome{
+    opacity: 0;
+    width: 10px;
+
+}
+.procedi{
+    
+    width: 120px;
+    height: 30px;
+    background-color: aqua;
+    border:none;
+    -webkit-box-shadow: 5px 5px 40px 14px #0AF2FF;
+    box-shadow: 5px 5px 20px 10px #0AF2FF;
+
+}
+.spazio{
+    padding-top: 40px;
+}
