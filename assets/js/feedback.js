@@ -7,16 +7,17 @@ var colorStar = (maxIndex) => {
     star.style.filter = "grayscale(0%)";
   }
 }
-var unColorStar = (maxIndex) => {
-  for (let i = 0; i <= maxIndex; i++) {
+var unColorStar = (minIndex, maxIndex) => {
+  for (let i = minIndex; i <= maxIndex; i++) {
     let star = starList[i];
     star.style.filter = "grayscale(100%)";
   }
 }
-var clickedStar = () => {
-  selectedValue=true;
-  if (selectedValue)
+var clickedStar = (indexStar) => {
+  selectedValue = true;
+  unColorStar(indexStar+1, starList.length - 1);
 }
+
 var selectedValue = false;
 const starList = document.querySelectorAll(".star");
 console.log(starList);
@@ -30,13 +31,13 @@ for (let i = 0; i < starList.length; i++) {
   });
 
   star.addEventListener("mouseout", function () {
-    if(!selectedValue){
+    if (!selectedValue) {
       console.log("Il mouse ha lasciato l'elemento!");
-      unColorStar(i);
+      unColorStar(0, starList.length - 1);
     }
   });
   star.addEventListener("click", function () {
     console.log("mouse ha cliccato");
-    clickedStar();
+    clickedStar(i);
   })
 }
