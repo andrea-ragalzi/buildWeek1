@@ -41,4 +41,4 @@ for (let i = 0; i < starList.length; i++) {
     clickedStar(i);
   })
 }
-//ciao
+//ciao da Andrea
