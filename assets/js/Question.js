@@ -265,7 +265,6 @@ var getRandomQuestions = () => {
         button4.setAttribute("value",answers[randomNumbers[3]]);
 
          return rispostaCorretta=questions[ra].correct_answer;
-        console.log(rispostaCorretta);
       
       //  console.log(questions[ra].correct_answer);
       
