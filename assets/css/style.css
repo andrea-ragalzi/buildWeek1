@@ -88,7 +88,19 @@ position: absolute;
     }
     
 
+#top{
+  position: relative;
+  font-size: 15px;
+top: -20px;
+left: 45px;
+}
 
+#botton{
+  position: relative;
+  font-size: 12px;
+  top: 20px;
+  left: -45px;
+}
 
 
 

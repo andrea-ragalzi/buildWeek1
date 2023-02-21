@@ -53,25 +53,36 @@ function onTimesUp() {
 
 function restartTime(){
   timePassed=-1;
-  onTimesUp();
+  set
   startTimer();
+
+}
+
+function timerOff(){
+  if(timePassed==0){
+      ++errati;
+      getRandomQuestions();
+      restartTime();
+      console.log(errati);
+  }
 
 }
 
 
  function startTimer() {
+
   timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
-    document.getElementById("base-timer-label").innerHTML = formatTime(
+    document.getElementById("base-timer-label").innerHTML = `<span id=top>Second</span>${formatTime(
       timeLeft
-    );
+    )}<span id=botton>Remaning</span> `;
     setCircleDasharray();
     setRemainingPathColor(timeLeft);
 
     if (timeLeft === 0) {
       onTimesUp();
-    }
+   }
   }, 1000);
 }
 
@@ -87,6 +98,7 @@ function formatTime(time) {
 }
 
 function setRemainingPathColor(timeLeft) {
+
   const { alert, warning, info } = COLOR_CODES;
   if (timeLeft <= alert.threshold) {
     document

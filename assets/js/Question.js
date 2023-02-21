@@ -1,8 +1,7 @@
 window.addEventListener("load", (event) => {
+setInterval(()=>timerOff(),"30000");
 getRandomQuestions();
 listenerButton(rispostaCorretta);
-
-
 
 });
 
@@ -274,8 +273,10 @@ var getRandomQuestions = () => {
      ;     
 }
 
-
 }
+
+
+
 
 
 
