@@ -210,10 +210,13 @@ var getRandomQuestions = () => {
  * @param {HTMLElement} button4 - Il quarto bottone sul quale visualizzare
  * la quarta risposta.
  */
+
+
     console.log(++con);
     let ra = Math.floor(Math.random() * questions.length);
-
     for (let i = 0; i < questions.length; i++) {
+         
+
         document.getElementById("domanda").innerHTML = questions[ra].question;
         let randomNumbers =
             getRandomNumbers(questions[ra].incorrect_answers.length);
@@ -231,14 +234,16 @@ var getRandomQuestions = () => {
 
         button4.innerText = answers[randomNumbers[3]];
         button4.setAttribute("value", answers[randomNumbers[3]]);
-
-        return rispostaCorretta = questions[ra].correct_answer;
+        
+        label.innerText=questions[ra].correct_answers;
+        
 
         //  console.log(questions[ra].correct_answer);
 
         // return stampaRisp(rispostaCorretta);
         ;
     }
+ 
 }
 
 const QUESTIONS_FILE = 'assets/js/questions.json';
@@ -246,7 +251,8 @@ const button1 = document.getElementById("0");
 const button2 = document.getElementById("1");
 const button3 = document.getElementById("2");
 const button4 = document.getElementById("3");
-var rispostaCorretta;
+const label=  document.getElementById("valoreNascosto");
+//var rispostaCorretta;
 var totale = 1;
 var corretti = 0;
 var errati = 0;
@@ -255,7 +261,7 @@ let con = 0;
 window.addEventListener("load", (event) => {
     setInterval(() => timerOff(), "30000");
     getRandomQuestions();
-    listenerButton(rispostaCorretta);
+    
 
 });
 
