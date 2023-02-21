@@ -7,7 +7,7 @@ var colorStar = (maxIndex) => {
     star.style.filter = "grayscale(0%)";
   }
 }
-var unColorStar = (minIndex, maxIndex) => {
+var unColorStar = (minIndex) => {
   for (let i = minIndex; i <= maxIndex; i++) {
     let star = starList[i];
     star.style.filter = "grayscale(100%)";
@@ -33,7 +33,7 @@ for (let i = 0; i < starList.length; i++) {
   star.addEventListener("mouseout", function () {
     if (!selectedValue) {
       console.log("Il mouse ha lasciato l'elemento!");
-      unColorStar(0, starList.length - 1);
+      unColorStar(0);
     }
   });
   star.addEventListener("click", function () {
