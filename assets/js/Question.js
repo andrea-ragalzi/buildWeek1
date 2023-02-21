@@ -145,9 +145,11 @@ var listenerButton = (questions)=>{
     button2.addEventListener("click", ()=>{
         if(button2.getAttribute("value")==questions){
             document.getElementById("Totale").innerHTML= ++totale;
+            restartTime();
             ++corretti;
             console.log("corretto");
         }else{
+            restartTime();
             ++errati;
             document.getElementById("Totale").innerHTML= ++totale;
             console.log("errato");
@@ -157,9 +159,11 @@ var listenerButton = (questions)=>{
     button3.addEventListener("click", ()=>{
         if(button3.getAttribute("value")==questions){
             document.getElementById("Totale").innerHTML= ++totale;
+            restartTime();
             ++corretti;
             console.log("corretto");
         }else{
+            restartTime();
             ++errati;
             document.getElementById("Totale").innerHTML= ++totale;
             console.log("errato");
@@ -169,10 +173,12 @@ var listenerButton = (questions)=>{
     button4.addEventListener("click", ()=>{
         if(button4.getAttribute("value")==questions){
             document.getElementById("Totale").innerHTML= ++totale;
+            restartTime();
             ++corretti;
             document.getElementById("Totale").innerHTML= ++totale;
             console.log("corretto");
         }else{
+            restartTime();
             ++errati;
             document.getElementById("Totale").innerHTML= ++totale;
             console.log("errato");
