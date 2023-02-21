@@ -9,21 +9,23 @@
 </head>
 <body>
     <div class="resultsContainer">
+        <!-- Header + titolo e sottotitolo -->
         <header>
             <img src="/assets/imgs/epicode_logo.png">
         </header>
         <main class="main">
             <div class="title">
-                <h1></h1>
+                <h1>Results</h1>
                 <span>The summary of your answers:</span>
             </div>  
-            <div class="output">
+            <!-- Sezione centrale contenente gli output dei risultati -->
+            <section class="output">
                 <div class="left">
                     <h2>Correct</h2>
-                    <h2>66.7%</h2>
-                    <span>4/6 questions</span>
+                    <h2 id="correctPercent"></h2>
+                    <span id="correctTot"></span>
                 </div>
-                <div class="center">
+                <div class="center"> <!-- Div centrale con al suo interno i div per generare il grafico a ciambella -->
                     <div class="donutBg">
                     <div class="donut">
                         <div class="innerDonutDiv">
@@ -35,10 +37,11 @@
                 </div>
                 <div class="right">
                     <h2>Wrong</h2>
-                    <h2>33.3%</h2>
-                    <span>2/6 questions</span>
+                    <h2 id="wrongPercent"></h2>
+                    <span id="wrongTot"></span>
                 </div>
-            </div>
+            </section>
+            <!-- pulsante Rate Us -->
             <div>
                 <button type="button" id="rateUs">RATE US</button>
             </div>
