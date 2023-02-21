@@ -1,11 +1,3 @@
-window.addEventListener("load", (event) => {
-setInterval(()=>timerOff(),"30000");
-getRandomQuestions();
-listenerButton(rispostaCorretta);
-
-});
-
-
 const questions = [
     {
         category: "Science: Computers",
@@ -105,17 +97,6 @@ const questions = [
         incorrect_answers: ["Python", "C", "Jakarta"],
     },
 ];
-const QUESTIONS_FILE = 'assets/js/questions.json';
-const button1 = document.getElementById("0");
-const button2 = document.getElementById("1");
-const button3 = document.getElementById("2");
-const button4 = document.getElementById("3");
-var rispostaCorretta;
-var totale=1;
-var corretti=0;
-var errati=0;
-
-
 
 var getRandomNumbers = (length) => {
     /**
@@ -135,95 +116,84 @@ var getRandomNumbers = (length) => {
     return [...set];
 }
 
+var listenerButton = (questions) => {
 
-
-
-
-
-var listenerButton = (questions)=>{
-    
     console.log(questions);
-    button1.addEventListener("click", ()=>{
-        if(button1.getAttribute("value")==questions){
-            document.getElementById("Totale").innerHTML= ++totale;
-           ++corretti;
-           restartTime();    
+    button1.addEventListener("click", () => {
+        if (button1.getAttribute("value") == questions) {
+            document.getElementById("Totale").innerHTML = ++totale;
+            ++corretti;
+            restartTime();
             console.log("corretto");
             getRandomQuestions();
-            
 
-        }else{
-          
-           restartTime();        
+
+        } else {
+
+            restartTime();
             ++errati;
-            document.getElementById("Totale").innerHTML= ++totale;
+            document.getElementById("Totale").innerHTML = ++totale;
             console.log("errato");
             //getRandomQuestions();
-            
+
         }
     });
 
-    button2.addEventListener("click", ()=>{
-        if(button2.getAttribute("value")==questions){
-            document.getElementById("Totale").innerHTML= ++totale;
-            restartTime();
-            ++corretti;
-             console.log("corretto");
-             getRandomQuestions();
-        }else{
-           
-            restartTime();
-            ++errati;
-            document.getElementById("Totale").innerHTML= ++totale;
-            console.log("errato");
-            getRandomQuestions();
-        }
-    });
-
-    button3.addEventListener("click", ()=>{
-        if(button3.getAttribute("value")==questions){
-            document.getElementById("Totale").innerHTML= ++totale;
+    button2.addEventListener("click", () => {
+        if (button2.getAttribute("value") == questions) {
+            document.getElementById("Totale").innerHTML = ++totale;
             restartTime();
             ++corretti;
             console.log("corretto");
             getRandomQuestions();
-        }else{
+        } else {
+
             restartTime();
             ++errati;
-            document.getElementById("Totale").innerHTML= ++totale;
+            document.getElementById("Totale").innerHTML = ++totale;
             console.log("errato");
             getRandomQuestions();
         }
     });
 
-    button4.addEventListener("click", ()=>{
-        if(button4.getAttribute("value")==questions){
+    button3.addEventListener("click", () => {
+        if (button3.getAttribute("value") == questions) {
+            document.getElementById("Totale").innerHTML = ++totale;
             restartTime();
-            document.getElementById("Totale").innerHTML= ++totale; 
             ++corretti;
-            document.getElementById("Totale").innerHTML= ++totale;
             console.log("corretto");
             getRandomQuestions();
-            
-        }else{
+        } else {
             restartTime();
             ++errati;
-            document.getElementById("Totale").innerHTML= ++totale;
+            document.getElementById("Totale").innerHTML = ++totale;
             console.log("errato");
-         getRandomQuestions();
-            
+            getRandomQuestions();
+        }
+    });
+
+    button4.addEventListener("click", () => {
+        if (button4.getAttribute("value") == questions) {
+            restartTime();
+            document.getElementById("Totale").innerHTML = ++totale;
+            ++corretti;
+            document.getElementById("Totale").innerHTML = ++totale;
+            console.log("corretto");
+            getRandomQuestions();
+
+        } else {
+            restartTime();
+            ++errati;
+            document.getElementById("Totale").innerHTML = ++totale;
+            console.log("errato");
+            getRandomQuestions();
+
 
         }
     });
-    
+
 
 }
-
-
-
-
-
-let con=0;
 
 var getRandomQuestions = () => {
     /**
@@ -240,39 +210,55 @@ var getRandomQuestions = () => {
  * @param {HTMLElement} button4 - Il quarto bottone sul quale visualizzare
  * la quarta risposta.
  */
-    
-
     console.log(++con);
-    let ra=Math.floor(Math.random()*questions.length);
-    
-    for(let i=0;i<questions.length;i++){
-        document.getElementById("domanda").innerHTML=questions[ra].question;
+    let ra = Math.floor(Math.random() * questions.length);
+
+    for (let i = 0; i < questions.length; i++) {
+        document.getElementById("domanda").innerHTML = questions[ra].question;
         let randomNumbers =
-          getRandomNumbers(questions[ra].incorrect_answers.length);
+            getRandomNumbers(questions[ra].incorrect_answers.length);
         let answers =
             questions[ra].incorrect_answers.concat(questions[ra].correct_answer);
-            
+
         button1.innerText = answers[randomNumbers[0]];
-        button1.setAttribute("value",answers[randomNumbers[0]]);
+        button1.setAttribute("value", answers[randomNumbers[0]]);
 
         button2.innerText = answers[randomNumbers[1]];
-        button2.setAttribute("value",answers[randomNumbers[1]]);
+        button2.setAttribute("value", answers[randomNumbers[1]]);
 
         button3.innerText = answers[randomNumbers[2]];
-        button3.setAttribute("value",answers[randomNumbers[2]]);
+        button3.setAttribute("value", answers[randomNumbers[2]]);
 
         button4.innerText = answers[randomNumbers[3]];
-        button4.setAttribute("value",answers[randomNumbers[3]]);
+        button4.setAttribute("value", answers[randomNumbers[3]]);
 
-         return rispostaCorretta=questions[ra].correct_answer;
-      
-      //  console.log(questions[ra].correct_answer);
-      
-      // return stampaRisp(rispostaCorretta);
-     ;     
+        return rispostaCorretta = questions[ra].correct_answer;
+
+        //  console.log(questions[ra].correct_answer);
+
+        // return stampaRisp(rispostaCorretta);
+        ;
+    }
 }
 
-}
+const QUESTIONS_FILE = 'assets/js/questions.json';
+const button1 = document.getElementById("0");
+const button2 = document.getElementById("1");
+const button3 = document.getElementById("2");
+const button4 = document.getElementById("3");
+var rispostaCorretta;
+var totale = 1;
+var corretti = 0;
+var errati = 0;
+let con = 0;
+
+window.addEventListener("load", (event) => {
+    setInterval(() => timerOff(), "30000");
+    getRandomQuestions();
+    listenerButton(rispostaCorretta);
+
+});
+
 
 
 
