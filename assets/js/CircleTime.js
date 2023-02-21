@@ -53,7 +53,6 @@ function onTimesUp() {
 
 function restartTime(){
   timePassed=-1;
-  set
   startTimer();
 
 }
