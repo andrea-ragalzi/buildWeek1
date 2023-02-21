@@ -5,14 +5,14 @@ var colorStar = (maxIndex) => {
   }
 }
 var unColorStar = (minIndex) => {
-  for (let i = minIndex; i <= maxIndex; i++) {
+  for (let i = minIndex; i <= starList.length; i++) {
     let star = starList[i];
     star.style.filter = "grayscale(100%)";
   }
 }
 var clickedStar = (indexStar) => {
   selectedValue = true;
-  unColorStar(indexStar + 1, starList.length - 1);
+  unColorStar(indexStar + 1);
 }
 
 var selectedValue = false;
