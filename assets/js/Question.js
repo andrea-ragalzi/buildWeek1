@@ -102,6 +102,12 @@ const button1 = document.getElementById("0");
 const button2 = document.getElementById("1");
 const button3 = document.getElementById("2");
 const button4 = document.getElementById("3");
+var btn=document.querySelectorAll("button");
+var totale=1;
+var corretti=0;
+var errati=0;
+
+
 
 var getRandomNumbers = (length) => {
     /**
@@ -121,7 +127,65 @@ var getRandomNumbers = (length) => {
     return [...set];
 }
 
-var getRandomQuestions = () => {
+var listenerButton = (questions)=>{
+    button1.addEventListener("click", ()=>{
+        if(button1.getAttribute("value")==questions){
+            document.getElementById("Totale").innerHTML= ++totale;
+           ++corretti;
+           restartTime();
+          return  console.log("corretto");
+        }else{
+           restartTime();
+            ++errati;
+            document.getElementById("Totale").innerHTML= ++totale;
+            console.log("errato");
+        }
+    })
+
+    button2.addEventListener("click", ()=>{
+        if(button2.getAttribute("value")==questions){
+            document.getElementById("Totale").innerHTML= ++totale;
+            ++corretti;
+            console.log("corretto");
+        }else{
+            ++errati;
+            document.getElementById("Totale").innerHTML= ++totale;
+            console.log("errato");
+        }
+    })
+
+    button3.addEventListener("click", ()=>{
+        if(button3.getAttribute("value")==questions){
+            document.getElementById("Totale").innerHTML= ++totale;
+            ++corretti;
+            console.log("corretto");
+        }else{
+            ++errati;
+            document.getElementById("Totale").innerHTML= ++totale;
+            console.log("errato");
+        }
+    })
+
+    button4.addEventListener("click", ()=>{
+        if(button4.getAttribute("value")==questions){
+            document.getElementById("Totale").innerHTML= ++totale;
+            ++corretti;
+            document.getElementById("Totale").innerHTML= ++totale;
+            console.log("corretto");
+        }else{
+            ++errati;
+            document.getElementById("Totale").innerHTML= ++totale;
+            console.log("errato");
+        }
+    })
+    
+}
+
+
+
+
+
+var getRandomQuestions = (questions) => {
     /**
  * Genera un insieme casuale di domande e relative risposte utilizzando
  * un array di oggetti 'questions'.
@@ -136,17 +200,36 @@ var getRandomQuestions = () => {
  * @param {HTMLElement} button4 - Il quarto bottone sul quale visualizzare
  * la quarta risposta.
  */
-    for (let question of questions) {
+
+    let ra=Math.floor(Math.random()*questions.length);
+
+    for(let i=0;i<questions.length;i++){
+        document.getElementById("domanda").innerHTML=questions[ra].question;
         let randomNumbers =
-            getRandomNumbers(question.incorrect_answers.length);
+            getRandomNumbers(questions[ra].incorrect_answers.length);
         let answers =
-            question.incorrect_answers.concat(question.correct_answer);
+            questions[ra].incorrect_answers.concat(questions[ra].correct_answer);
+            
         button1.innerText = answers[randomNumbers[0]];
+        button1.setAttribute("value",answers[randomNumbers[0]]);
+
         button2.innerText = answers[randomNumbers[1]];
+        button2.setAttribute("value",answers[randomNumbers[1]]);
+
         button3.innerText = answers[randomNumbers[2]];
+        button3.setAttribute("value",answers[randomNumbers[2]]);
+
         button4.innerText = answers[randomNumbers[3]];
-    }
+        button4.setAttribute("value",answers[randomNumbers[3]]);
+
+
 }
 
-getRandomQuestions();
+listenerButton(questions[ra].correct_answer);
+    
+}
+
+
+getRandomQuestions(questions);
+
 

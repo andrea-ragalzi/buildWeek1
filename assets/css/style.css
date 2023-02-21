@@ -62,7 +62,9 @@ margin-top: 10%;
 
 #Question{
     margin-top: 5%;
+    color: rgb(148, 8, 90);
 }
+
 
 #totale{
     color:rgba(255, 0, 0, 0.575);
@@ -140,3 +142,5 @@ position: absolute;
     justify-content: center;
     font-size: 25px;
   }
+
+

@@ -16,7 +16,7 @@ const COLOR_CODES = {
   }
 };
 
-const TIME_LIMIT = 30;
+const  TIME_LIMIT = 30;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -45,14 +45,21 @@ document.getElementById("app").innerHTML = `
   )}</span>
 </div>
 `;
-
 startTimer();
 
 function onTimesUp() {
   clearInterval(timerInterval);
 }
 
-function startTimer() {
+function restartTime(){
+  timePassed=-1;
+  onTimesUp();
+  startTimer();
+
+}
+
+
+ function startTimer() {
   timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
