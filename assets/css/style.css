@@ -1,0 +1,19 @@
+html,
+body {
+  height: 100%;
+  background-image: url(../image/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: rgb(255, 255, 255);
+}
+
+#buttons>button {
+  background-color: rgba(196, 190, 190, 0.178);
+  border: 0.2em solid rgba(221, 221, 221, 0.658);
+  border-style: outset;
+  border-radius: 30px;
+  color: white;
+  width: 20em;
+  height: 5em;
+}
