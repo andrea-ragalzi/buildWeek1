@@ -59,6 +59,11 @@ margin-top: 10%;
     height: 5em;
 }
 
+.Button:hover{
+  background-color:#D20094;
+  box-shadow:0 0 3px 3px #D20094;
+
+}
 
 #Question{
     margin-top: 5%;
