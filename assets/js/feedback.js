@@ -1,36 +1,63 @@
+class Star {
+  constructor() {
+    this.html;
+    this.clicked;
+  }
+}
+
+var clickedStar = (indexStar) => {
+  for (let i = 0; i <= indexStar; i++) {
+    let star = stars[i];
+    star.clicked = true;
+  }
+  for (let i = indexStar + 1; i < stars.length; i++) {
+    let star = stars[i];
+    star.clicked = false;
+  }
+}
+
 var colorStar = (maxIndex) => {
   for (let i = 0; i <= maxIndex; i++) {
-    let star = starList[i];
-    star.style.filter = "grayscale(0%)";
+    let star = stars[i];
+    star.html.style.filter = "grayscale(0%)";
   }
 }
+
+var createStars = () => {
+  const starHtmlList = document.querySelectorAll(".star");
+  let result = [];
+  for (let starHtml of starHtmlList) {
+    let star = new Star();
+    star.html = starHtml;
+    star.clicked = false;
+    result.push(star);
+  }
+  return result;
+}
+
 var unColorStar = (minIndex) => {
-  for (let i = minIndex; i <= starList.length; i++) {
-    let star = starList[i];
-    star.style.filter = "grayscale(100%)";
+  for (let i = 0; i < stars.length; i++) {
+    let star = stars[i];
+    if (star.clicked) {
+      star.html.style.filter = "grayscale(0%)";
+    }
+    else {
+      star.html.style.filter = "grayscale(100%)";
+    }
   }
 }
-var clickedStar = (indexStar) => {
-  selectedValue = true;
-  unColorStar(indexStar + 1);
-}
 
-var selectedValue = false;
-const starList = document.querySelectorAll(".star");
+var stars = createStars();
 
-
-for (let i = 0; i < starList.length; i++) {
-  let star = starList[i];
-  star.addEventListener("mouseover", function () {
+for (let i = 0; i < stars.length; i++) {
+  let star = stars[i];
+  star.html.addEventListener("mouseover", function () {
     colorStar(i);
   });
-
-  star.addEventListener("mouseout", function () {
-    if (!selectedValue) {
-      unColorStar(0);
-    }
-  });
-  star.addEventListener("click", function () {
+  star.html.addEventListener("click", function () {
     clickedStar(i);
   })
+  star.html.addEventListener("mouseout", function () {
+    unColorStar(i);
+  });
 }
