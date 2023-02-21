@@ -1,67 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-html, body{
+
+html,
+body {
     width: 100%;
     margin: 0;
     padding: 0;
     background-image: url(/assets/img/bg.jpg);
     background-size: cover;
-   
 }
-header #logo{
+
+header #logo {
     height: 40px;
     padding: 3%;
 }
-#feedbackDiv{
+
+#feedbackDiv {
     width: 100%;
 
 }
-h1{
+
+h1 {
+    margin-top: 0%;
     text-align: center;
     color: white;
     font-family: 'Outfit', sans-serif;
     font-size: 60px;
 }
-h3{
+
+h3 {
     text-align: center;
     color: white;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     padding-bottom: 20px;
 }
-.star{
-   margin: 0 auto;
-   margin-right:10px;
-   padding-bottom: 10px;
-   filter: grayscale(100%);
-   display: inline;
+
+#starList {
+    text-align: center;
+    padding-right: 2%;
 }
 
+.star {
+    margin: 0 auto;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    filter: grayscale(100%);
+    display: inline;
+}
 
-input{
+input {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: white;
+    outline: none;
     background: transparent;
     border: none;
-    border-bottom: #900080;
-    width: 35%;
-    padding-top: 0.5em;
-}
-div #commento{
-    text-align: center;
-    padding-bottom: 40px;  
-}
-footer{
-    text-align: center;
-}
-button{
-   background-color: #00FFFF;  
-    width: 130px;
-}
-button:hover{
-    border-color:#00FFFF;
-;
+    width: 45%;
+    padding: 0.5em;
+    border-bottom: solid #900080;
 
 }
-#moreInfo{
+
+div #commento {
+    text-align: center;
+    padding-bottom: 4em;
+}
+
+footer {
+    text-align: center;
+}
+
+button {
+    border: transparent;
+    background-color: #00FFFF;
+    width: 130px;
+    box-shadow: 0px 0px 40px 0px #00ffffa9;
+}
+
+button:hover {
+
+    box-shadow: 0px 0px 60px 0px #00FFFF;
+}
+
+#moreInfo {
     color: black;
     font-family: 'Outfit', sans-serif;
     font-weight: bold;
