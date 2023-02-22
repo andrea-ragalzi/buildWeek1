@@ -55,7 +55,7 @@ for (let i = 0; i < stars.length; i++) {
     colorStar(i);
   });
   star.html.addEventListener("click", function () {
-    clickedStar(i);
+    clickedStar(i)===unColorStar(i);
   })
   star.html.addEventListener("mouseout", function () {
     unColorStar(i);
