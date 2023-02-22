@@ -9,7 +9,10 @@ body {
     background-repeat: no-repeat;
     font-family: 'Inter', sans-serif;
     color: white;
-    height: 100vh;
+}
+
+#wrap404 {
+    height: 100%;
 }
 
 #wrap404 h1 {
@@ -34,7 +37,7 @@ body {
 }
 
 #wrap404 #mainContainer img {
-    max-width: 50%;
+    max-width: 30%;
     height: auto;
 }
 
