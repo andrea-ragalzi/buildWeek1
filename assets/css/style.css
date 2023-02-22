@@ -49,7 +49,7 @@ margin-top: 10%;
 }
 
 
-.Button{
+button{
     background-color: rgba(196, 190, 190, 0.178);
     border: 0.2em solid rgba(221, 221, 221, 0.658);
     border-style:outset;
@@ -59,13 +59,13 @@ margin-top: 10%;
     height: 5em;
 }
 
-.Button:hover{
+button:hover{
   background-color:#D20094;
   box-shadow:0 0 3px 3px #D20094;
 
 }
 
-#Question{
+#question{
     margin-top: 5%;
     color: rgb(148, 8, 90);
 }

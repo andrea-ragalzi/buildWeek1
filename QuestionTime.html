@@ -1,70 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>QuestionTime</title>
+    <title>Benchmark Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <header id="head">
+    <header>
         <img src="assets/image/epicode_logo.png" title="Epicode" alt="Questo è il logo" id="Logo">
-
     </header>
-    <div id="container">
-        <div class="testo">
-
-
-            <div id="app"> </div>
-
-
-        </div>
-        <main>
-            <h2>How can I create a <strong>checkbox in HTML?</strong></h2>
-            <h3 id="domanda"></h3>
-            <table id="table">
-
-                <tr>
-                    <td>
-                        <button class="Button" name="Button" id="0">Testo 1</button>
-                    </td>
-
-                    <td>
-                        <button class="Button" name="Button" id="1">Testo 2</button>
-
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td>
-                        <button class="Button" name="Button" id="2">Testo 3</button>
-
-                    </td>
-
-                    <td>
-                        <button class="Button" name="Button" id="3">Testo 4</button>
-
-                    </td>
-
-
-                </tr>
-
-
-
-            </table>
-
-
-           <p> <span>Question: </span><span id="Totale">1</span><span id="Question">/10</span></p>
-            </p>
-        </main>
+    <div id="question-container">
+        <div id="app"></div>
+        <div id="question"></div>
+        <div id="buttons"></div>
+        <div id="progress"></div>
     </div>
-    <p id="valoreNascosto" style="visibility: hidden;"></p>
     <script src="assets/js/CircleTime.js"></script>
-    <script src="assets/js/Question.js"></script>
+    <script src="assets/js/question.js"></script>
 </body>
 
 </html>
