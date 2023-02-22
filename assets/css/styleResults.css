@@ -52,7 +52,7 @@ html, body {
     width: 100%;
     height: fit-content;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -71,6 +71,10 @@ html, body {
 .resultsContainer .center {
     width: 350px;
     height: 350px;
+}
+
+.resultsContainer .outputBoxSmallScreen {
+    display: none;
 }
 /*Grafico a ciambella*/
 .resultsContainer .donutBg, .donut {
@@ -102,9 +106,13 @@ html, body {
     border-radius: 50%;
 }
 
-.resultsContainer .innerDonutDiv {
+.resultsContainer .innerDonutDiv, .innerDonutDivSmallScreen {
     width: 60%;
     position: absolute;
+}
+
+.resultsContainer .innerDonutDivSmallScreen {
+   display: none;
 }
 
 .resultsContainer .innerDonut1 span {
@@ -140,4 +148,30 @@ html, body {
     color: #000000;
     border-color: #00ffff;
     box-shadow: 0px 0px 60px 0px #00ffff;
+}
+/*Responsive*/
+@media screen and (max-width: 1280px) {
+    .resultsContainer .innerDonutDiv, .left, .right {
+        display: none;
+    }
+
+    .resultsContainer .output {
+        flex-direction: column;
+    }
+
+    .resultsContainer .innerDonutDivSmallScreen {
+        display: initial;
+    }
+
+    .resultsContainer .innerDonutDivSmallScreen h2:first-of-type {
+        font-size: 2em;
+    }
+
+    .resultsContainer .outputBoxSmallScreen {
+        display: initial;
+    }
+    
+    .resultsContainer .outerDonut1 span {
+        color: #00ffff;
+    }
 }
