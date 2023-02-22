@@ -3,49 +3,50 @@ height: 100%;
 background-image: url(../image/bg.jpg);
 background-repeat: no-repeat;
 background-size:cover;
+color: white;
 }
 
-#head{
-    width: 100%;
-    
-}
 
+
+/*Logo*/
 #Logo{
-    width: 15%;
+  width: 15%;
 
+}
+
+/*Conteiner*/
+
+#question-container{
+  width:40%; 
+  position: absolute;
+  top:50%;
+  left:35%;
+  margin-top: -100px;
+  margin-left: -100px;
+
+}
+
+
+/*StyleQuestion*/
+#question{
+  margin: 0 auto;
+  position: fixed;
+  width: 40%;
+  top:26%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30px;
+  
 }
 
 
 
 
-#container{
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 10%;
-    text-align: center;
-    color:white;
-}
+/*StyleButton*/
 
-h2{
-    font-size: 2em;
-    width: 40%;
-    margin: 0 auto;
-    color: rgba(255, 255, 255, 0.774);
-}
-strong{
-    color: white;
-}
-
-
-#countdown{
-    text-align: right;
-
-}
-
-#table{
+#buttons{
 margin: 0 auto;
-margin-top: 10%;
-
+text-align: center;
 }
 
 
@@ -55,6 +56,7 @@ button{
     border-style:outset;
     border-radius: 30px;
     color: white;
+    margin: 20px;
     width: 20em;
     height: 5em;
 }
@@ -65,20 +67,27 @@ button:hover{
 
 }
 
-#question{
-    margin-top: 5%;
-    color: rgb(148, 8, 90);
+
+/*positionProgress*/
+
+#progress{
+font-size: 20px;
+position: fixed;
+margin: 0 auto;
+bottom: 10%;
+left: 46.7%;
 }
 
-
-#totale{
+/*ColorProgress*/
+#violet{
     color:rgba(255, 0, 0, 0.575);
 }
 
-.testo{
-display: contents;
-position: absolute;
-}
+
+
+
+/*SVG Timer*/
+
 
 #app{
    width: 100%;
@@ -90,25 +99,23 @@ position: absolute;
 
 #top{
   position: relative;
-  font-size: 15px;
-top: -20px;
-left: 45px;
+  font-size: 28px;
+top: -40px;
+left: 77px;
 }
 
 #botton{
   position: relative;
-  font-size: 12px;
-  top: 20px;
-  left: -45px;
+  font-size: 16px;
+  top: 35px;
+  left: -76px;
 }
-
-
 
 .base-timer {
     
     right: 10%;
-    width: 6em;
-    height: 6em;
+    width: 10em;
+    height: 10em;
   }
   
   .base-timer__svg {
@@ -152,12 +159,12 @@ left: 45px;
     position: relative;
     width: 1em;
     height: 1em;
-    bottom: 2.5em;
-    left: 1.5em;
+    bottom: 2.3em;
+    left: 1.15em;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 25px;
+    font-size: 45px;
   }
 
 

@@ -45,6 +45,7 @@ var endQuiz = () => {
     questionElem.innerHTML = `Your score is ${score}/${questions.length}`;
     buttonsElem.innerHTML = '';
     progressElem.innerHTML = '';
+    app.innerHTML="";
 }
 
 var showQuestion = () => {
@@ -63,8 +64,10 @@ var showQuestion = () => {
                 `<button onclick="checkAnswer('${answers[i]}')">${answers[i]}</button>`;
         }
     }
-    progressElem.innerHTML = `${currentQuestion + 1}/${questions.length}`;
+    progressElem.innerHTML = `Question: ${currentQuestion + 1} <span id="violet">/${questions.length}</span>`;
+    restartTime();
 }
+
 
 var shuffle = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -78,6 +81,7 @@ const QUESTION_FILENAME = '/assets/json/questions.json';
 const questionElem = document.getElementById('question');
 const buttonsElem = document.getElementById('buttons');
 const progressElem = document.getElementById('progress');
+const app= document.getElementById('app');
 var questions;
 let currentQuestion = 0;
 let score = 0;
@@ -85,6 +89,8 @@ let score = 0;
 window.onload = () => {
     startQuiz();
 }
+
+
 
 
 
