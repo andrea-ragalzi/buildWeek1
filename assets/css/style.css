@@ -5,8 +5,13 @@ background-repeat: no-repeat;
 background-size:cover;
 color: white;
 }
+header{
+  height: 30vh;
+}
 
 
+
+  
 
 /*Logo*/
 #Logo{
@@ -18,24 +23,21 @@ color: white;
 
 #question-container{
   width:40%; 
-  position: absolute;
-  top:50%;
-  left:35%;
-  margin-top: -100px;
-  margin-left: -100px;
+  margin: 0 auto;
 
 }
+
+
 
 
 /*StyleQuestion*/
 #question{
   margin: 0 auto;
-  position: fixed;
-  width: 40%;
-  top:26%;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
   font-size: 30px;
+  
   
 }
 
@@ -45,8 +47,10 @@ color: white;
 /*StyleButton*/
 
 #buttons{
-margin: 0 auto;
+margin:0 auto;
 text-align: center;
+width:fit-content;
+
 }
 
 
@@ -56,9 +60,10 @@ button{
     border-style:outset;
     border-radius: 30px;
     color: white;
-    margin: 20px;
-    width: 20em;
+    margin: 10px;
+    width: 15em;
     height: 5em;
+  
 }
 
 button:hover{
@@ -71,11 +76,9 @@ button:hover{
 /*positionProgress*/
 
 #progress{
+  width: fit-content;
 font-size: 20px;
-position: fixed;
 margin: 0 auto;
-bottom: 10%;
-left: 46.7%;
 }
 
 /*ColorProgress*/
