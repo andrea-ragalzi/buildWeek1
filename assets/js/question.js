@@ -42,10 +42,6 @@ var checkAnswer = (answer) => {
 }
 
 var endQuiz = () => {
-    // var key = CryptoJS.SHA3('benchmark',128);
-
-    // encryptedQuestionLength = CryptoJS.AES.encrypt(questions.length.toString(),'TOYT079n'+'sH8GO8T2XsD7bt5Cs4LoLILPIX'+'S73rUIl7wMTNdSidRtis5wK3pnjg').toString();
-
     questionElem.innerHTML = `Your score is ${score}/${questions.length}`;
     buttonsElem.innerHTML = '';
     progressElem.innerHTML = '';
@@ -53,9 +49,9 @@ var endQuiz = () => {
     localStorage.setItem('score', CryptoJS.AES.encrypt(score.toString(), secretKey).toString());
     localStorage.setItem('questionsNumber', CryptoJS.AES.encrypt(questions.length.toString(), secretKey).toString());
     window.location.href = 'results.html';
-    const stateObj = { page: "quiz" };
-    const pageTitle = "Quiz";
-    const newUrl = "quiz";
+    const stateObj = { page: "404" };
+    const pageTitle = "404 - Benchmark";
+    const newUrl = "404.html";
     window.history.pushState(stateObj, pageTitle, newUrl);
 }
 
