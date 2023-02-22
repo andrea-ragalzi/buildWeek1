@@ -20,17 +20,7 @@ Così facendo potete utilizzare i selettori CSS come meglio credete MA PONENDOLI
 
 es.----------------------------------------------------------------------------------
 
-.feedbackContainer div {
-	//
-}
-
-.feedbackContainer p {
-	//
-}
-
-.feedbackContainer .myClass {
-	//
-}
+.feedbackContainer div {--
 
 .feedbackContainer #thisId {
 	//
