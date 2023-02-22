@@ -28,6 +28,13 @@ Scrivere il codice nel seguente ordine:
 
 Ordinare le funzioni e le classi alfabeticamente quabdo possibile.
 
+## HTML
+
+Seguire questa struttura per il body:
+- header
+- main
+- footer
+
 ## CSS
 
 Ogni pagina HTML avrà un div container che racchiude tutto il contenuto
