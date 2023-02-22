@@ -26,6 +26,8 @@ Scrivere il codice nel seguente ordine:
 - variables
 - entry point code
 
+Ordinare le funzioni e le classi alfabeticamente quabdo possibile.
+
 ## CSS
 
 Ogni pagina HTML avrà un div container che racchiude tutto il contenuto
