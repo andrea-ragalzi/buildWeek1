@@ -1,0 +1,45 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(/assets/imgs/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    height: 100vh;
+}
+
+#wrap404 h1 {
+    font-size: 4em;
+}
+
+#wrap404 h2 {
+    font-size: 2em;
+}
+
+#wrap404 header {
+    padding: 10px;
+}
+
+#wrap404 header img {
+    width: 15%;
+    height: auto;
+}
+
+#wrap404 main {
+    text-align: center;
+}
+
+#wrap404 #mainContainer img {
+    max-width: 50%;
+    height: auto;
+}
+
+#wrap404 a {
+    color: aliceblue;
+    display: block;
+    font-size: 1.5em;
+}
