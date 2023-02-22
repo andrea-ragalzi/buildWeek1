@@ -2,15 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 html,
-body #feedbackBody {
+body {
     width: 100%;
     margin: 0;
     padding: 0;
     background-image: url(/assets/img/bg.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 100%;
+    
 }
 
-header #feedbackLogo {
+#feedbackLogo {
     height: 40px;
     padding: 3%;
 }
@@ -43,9 +47,9 @@ header #feedbackLogo {
 
 .star {
     margin: 0 auto;
-    margin-right: 10px;
+    margin-right: 5px;
     padding-bottom: 10px;
-    filter: grayscale(100%);
+    filter:brightness(0);
     display: inline;
 }
 
@@ -62,7 +66,7 @@ header #feedbackLogo {
 
 }
 
-div #feedbackText {
+#feedbackText {
     text-align: center;
     padding-bottom: 4em;
 }
