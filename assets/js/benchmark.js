@@ -58,16 +58,16 @@ var selectQuestions = (difficulty) => {
 }
 
 var showQuestion = () => {
-    
-    questionElem.innerHTML = questions[currentQuestion].question;
+    let selectedQuestions = selectQuestions(difficulty);
+    questionElem.innerHTML = selectedQuestions[currentQuestion].question;
     buttonsElem.innerHTML = '';
-    if (questions[currentQuestion].type === "boolean") {
+    if (selectedQuestions[currentQuestion].type === "boolean") {
         buttonsElem.innerHTML += `<button onclick="checkAnswer('True')">True</button>`;
         buttonsElem.innerHTML += `<button onclick="checkAnswer('False')">False</button>`;
     }
     else {
-        let answers = questions[currentQuestion].incorrect_answers.concat(
-            questions[currentQuestion].correct_answer);
+        let answers = selectedQuestions[currentQuestion].incorrect_answers.concat(
+            selectedQuestions[currentQuestion].correct_answer);
         shuffle(answers);
         for (let i = 0; i < answers.length; i++) {
             buttonsElem.innerHTML +=
