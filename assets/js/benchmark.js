@@ -37,6 +37,7 @@ var checkAnswer = (answer) => {
     if (currentQuestion === questions.length) {
         endQuiz();
     } else {
+        restartTime();
         showQuestion();
     }
 }
