@@ -1,30 +1,46 @@
-html{
+html,body{
 height: 100%;
 background-image: url(../image/bg.jpg);
 background-repeat: no-repeat;
 background-size:cover;
 color: white;
+margin: 0;
 }
+
+/*divLogo*/
+#logo_div{
+  width: 70%;
+  display: inline-block;
+  
+}
+
+/*contenitore del corpo*/
+#container{
+  width: 90%;
+  margin: 0 auto;
+}
+
+
 header{
   height: 30vh;
+  display: flex;
+  margin-bottom: 10px;
+  padding-top: 5%;
 }
 
 
-
-  
 
 /*Logo*/
 #Logo{
-  width: 15%;
-
+  width: 30%;
 }
 
 /*Conteiner*/
 
 #question-container{
-  width:40%; 
+  width:100%; 
   margin: 0 auto;
-
+ 
 }
 
 
@@ -37,8 +53,6 @@ header{
   margin: 0 auto;
   text-align: center;
   font-size: 30px;
-  
-  
 }
 
 
@@ -48,9 +62,9 @@ header{
 
 #buttons{
 margin:0 auto;
+width: 40%;
 text-align: center;
-width:fit-content;
-
+padding-top: 100px;
 }
 
 
@@ -79,6 +93,7 @@ button:hover{
   width: fit-content;
 font-size: 20px;
 margin: 0 auto;
+padding-top: 190px;
 }
 
 /*ColorProgress*/
@@ -93,12 +108,12 @@ margin: 0 auto;
 
 
 #app{
-   width: 100%;
-    position: fixed;
-    left:80%;
-    bottom:80%;
+   width: 5%;
+    display: inline-block;
     }
+
     
+
 
 #top{
   position: relative;

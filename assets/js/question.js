@@ -1,3 +1,4 @@
+                //InitPage
 var initPage = async () => {
     try {
         questions = await readJsonFile(QUESTION_FILENAME)
@@ -6,7 +7,7 @@ var initPage = async () => {
         console.error(error);
     }
 }
-
+                //ReadFileJson
 var readJsonFile = async (filename) => {
     try {
         const response = await fetch(filename);
@@ -19,7 +20,7 @@ var readJsonFile = async (filename) => {
         console.error(error);
     }
 }
-
+                //StartQuiz
 var startQuiz = async () => {
     try {
         await initPage();
@@ -28,7 +29,7 @@ var startQuiz = async () => {
         console.error(error);
     }
 }
-
+                //CheckAnswer
 var checkAnswer = (answer) => {
     if (answer === questions[currentQuestion].correct_answer) {
         score++;
@@ -40,14 +41,14 @@ var checkAnswer = (answer) => {
         showQuestion();
     }
 }
-
+                //EndQuiz
 var endQuiz = () => {
     questionElem.innerHTML = `Your score is ${score}/${questions.length}`;
     buttonsElem.innerHTML = '';
     progressElem.innerHTML = '';
     app.innerHTML="";
 }
-
+                //showQuestion
 var showQuestion = () => {
     questionElem.innerHTML = questions[currentQuestion].question;
     buttonsElem.innerHTML = '';
@@ -68,7 +69,7 @@ var showQuestion = () => {
     restartTime();
 }
 
-
+                //shuffleArray
 var shuffle = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -76,7 +77,7 @@ var shuffle = (array) => {
     }
     return array;
 }
-
+                //VariabiliGlobali
 const QUESTION_FILENAME = '/assets/json/questions.json';
 const questionElem = document.getElementById('question');
 const buttonsElem = document.getElementById('buttons');
@@ -86,6 +87,7 @@ var questions;
 let currentQuestion = 0;
 let score = 0;
 
+                 //LoadPage
 window.onload = () => {
     startQuiz();
 }
