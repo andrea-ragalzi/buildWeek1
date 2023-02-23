@@ -93,7 +93,7 @@ var currentQuestion = 0;
 var score = 0;
 var encryptedScore;
 var encryptedQuestionLength;
-var difficulty = 'hard';
+var difficulty = 'Hard';
 
 window.onload = () => {
     startQuiz();

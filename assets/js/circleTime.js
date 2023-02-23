@@ -2,7 +2,8 @@ const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
 
-
+const difficolta=localStorage.getItem("Difficulty");
+console.log(difficolta);
 const COLOR_CODES = {
   info: {
     color: "green"
@@ -17,20 +18,24 @@ const COLOR_CODES = {
   }
 };
 
-var  TIME_LIMIT;
-
-
-if(selected=="Easy"){
-
-    TIME_LIMIT = 30;
-
-}else if(selected=="Medium"){
-   TIME_LIMIT = 40;
-
-}else if(selected=="Hard"){
-   TIME_LIMIT = 60;
+var dif= (difficolta)=>{
+  
+  if(difficolta==="Easy"){
+    
+    return TIME_LIMIT = 30;
+ 
+ }else if(difficolta==="Medium"){
+    return TIME_LIMIT = 40;
+ 
+ }else if(difficolta==="Hard"){
+   return TIME_LIMIT = 60;
+ 
+ }
 
 }
+
+var TIME_LIMIT;
+dif(difficolta);
 
 let timePassed = 0;
 var timeLeft = TIME_LIMIT;
