@@ -1,7 +1,7 @@
 var initPage = async () => {
     try {
-        questions = await readJsonFile(QUESTION_FILENAME)
-        questions = shuffle(questions);
+        questions = await readJsonFile(QUESTION_FILENAME);
+        questions = shuffle(selectQuestions(difficulty));
     } catch (error) {
         console.error(error);
     }
@@ -53,7 +53,7 @@ var endQuiz = () => {
     window.history.pushState(stateObj, pageTitle, newUrl);
 }
 
-var selectQuestionsByDifficulty = (difficulty) => {
+var selectQuestions = (difficulty) => {
     return questions.filter((question) => question.difficulty === difficulty);
 }
 
@@ -93,7 +93,7 @@ var currentQuestion = 0;
 var score = 0;
 var encryptedScore;
 var encryptedQuestionLength;
-
+var difficulty = 'hard';
 
 window.onload = () => {
     startQuiz();
