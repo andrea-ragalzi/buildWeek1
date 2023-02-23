@@ -108,7 +108,6 @@ function formatTime(time) {
 }
 
 function setRemainingPathColor(timeLeft) {
-  console.log(timeLeft);
   const { alert, warning, info } = COLOR_CODES;
   if (timeLeft <= alert.threshold) {
     document
