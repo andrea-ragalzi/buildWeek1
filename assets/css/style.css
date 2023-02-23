@@ -1,0 +1,201 @@
+html,body{
+  height: fit-content;
+background-image: url(../image/bg.jpg);
+background-repeat: no-repeat;
+background-size:cover;
+color: white;
+margin: 0;
+
+}
+
+
+  
+
+
+/*divLogo*/
+#logo_div{
+  width: 70%;
+  display: inline-block;
+  
+}
+
+/*contenitore del corpo*/
+#container{
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+header{
+  height: 30vh;
+  display: flex;
+  margin-bottom: 10px;
+  padding-top: 5%;
+}
+
+
+
+/*Logo*/
+#Logo{
+  width: 30%;
+}
+
+/*Conteiner*/
+
+#question-container{
+  width:100%; 
+  margin: 0 auto;
+ 
+}
+
+
+
+
+/*StyleQuestion*/
+#question{
+  margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+
+
+/*StyleButton*/
+
+#buttons{
+margin:0 auto;
+width: 55%;
+text-align: center;
+padding-top: 100px;
+}
+
+
+button{
+    background-color: rgba(196, 190, 190, 0.178);
+    border: 0.2em solid rgba(221, 221, 221, 0.658);
+    border-style:outset;
+    border-radius: 30px;
+    color: white;
+    margin: 15px;
+    width: 18em;
+    height: 5em;
+  
+}
+
+button:hover{
+  background-color:#D20094;
+  box-shadow:0 0 3px 3px #D20094;
+
+}
+
+
+/*positionProgress*/
+
+#progress{
+  width: fit-content;
+font-size: 20px;
+margin: 0 auto;
+padding-top: 190px;
+}
+
+/*ColorProgress*/
+#violet{
+    color:rgba(255, 0, 0, 0.575);
+}
+
+
+
+
+/*SVG Timer*/
+
+
+#app{
+   width: 5%;
+    display: inline-block;
+    }
+
+    
+
+
+#top{
+  position: relative;
+  font-size: 28px;
+top: -40px;
+left: 77px;
+}
+
+#botton{
+  position: relative;
+  font-size: 16px;
+  top: 35px;
+  left: -76px;
+}
+
+.base-timer {
+    
+    right: 10%;
+    width: 10em;
+    height: 10em;
+  }
+  
+  .base-timer__svg {
+    transform: scaleX(-1);
+  }
+  
+  .base-timer__circle {
+   
+  fill: none;
+  stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 8px;
+    stroke: grey;
+  }
+  
+  .base-timer__path-remaining {
+    stroke-width: 10px;
+    stroke-linecap: round;
+    transform:scaleY(-1) rotate(265deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+  }
+  
+  .base-timer__path-remaining.green {
+    color: rgb(187, 17, 209);
+  }
+  
+  .base-timer__path-remaining.orange {
+    color: orange;
+  }
+  
+  .base-timer__path-remaining.red {
+    color: red;
+  }
+  
+  .base-timer__label {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    bottom: 2.3em;
+    left: 1.15em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+  }
+
+
+  @media screen and (max-width: 600px){
+
+    #buttons{
+      width: fit-content;
+      
+    }
+  }
+    

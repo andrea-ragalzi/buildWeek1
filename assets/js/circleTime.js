@@ -18,7 +18,7 @@ const COLOR_CODES = {
 
 const  TIME_LIMIT = 30;
 let timePassed = 0;
-let timeLeft = TIME_LIMIT;
+var timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
 
@@ -57,15 +57,7 @@ function restartTime(){
   startTimer();
 }
 
-function timerOff(){
-  if(timePassed==0){
-      ++errati;
-      getRandomQuestions();
-      restartTime();
-      console.log(errati);
-  }
 
-}
 
 
  function startTimer() {
@@ -79,8 +71,12 @@ function timerOff(){
     setCircleDasharray();
     setRemainingPathColor(timeLeft);
 
-    if (timeLeft === 0) {
+    if (timeLeft ===0) {
       onTimesUp();
+      restartTime();
+      setRemainingPathColorRestart(timeLeft);
+      checkAnswer(-1);
+
    }
   }, 1000);
 }
@@ -97,7 +93,7 @@ function formatTime(time) {
 }
 
 function setRemainingPathColor(timeLeft) {
-
+  console.log(timeLeft);
   const { alert, warning, info } = COLOR_CODES;
   if (timeLeft <= alert.threshold) {
     document
@@ -114,6 +110,24 @@ function setRemainingPathColor(timeLeft) {
       .getElementById("base-timer-path-remaining")
       .classList.add(warning.color);
   }
+}
+
+function setRemainingPathColorRestart(timeLeft) {
+
+  console.log(timeLeft);
+  const { alert, warning, info } = COLOR_CODES;
+  document
+  .getElementById("base-timer-path-remaining")
+  .classList.remove(alert.color);
+  document
+  .getElementById("base-timer-path-remaining")
+  .classList.remove(warning.color);
+  document
+  .getElementById("base-timer-path-remaining")
+  .classList.add(info.color);
+
+
+ 
 }
 
 function calculateTimeFraction() {

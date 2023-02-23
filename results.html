@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results</title>
-    <link rel="stylesheet" href="/assets/css/styleResults.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
+
 <body>
     <div class="resultsContainer">
         <!-- Header + titolo e sottotitolo -->
@@ -17,7 +19,7 @@
             <div class="title">
                 <h1>Results</h1>
                 <span>The summary of your answers:</span>
-            </div>  
+            </div>
             <!-- Sezione centrale contenente gli output dei risultati -->
             <section class="output">
                 <div class="left">
@@ -27,10 +29,10 @@
                 </div>
                 <div class="center"> <!-- Div centrale con al suo interno i div per generare il grafico a ciambella -->
                     <div class="donutBg">
-                    <div class="donut">
-                        <div class="innerDonutDivSmallScreen" id="iDdSs"></div>
-                        <div class="innerDonutDiv" id="iDd"></div>
-                    </div>
+                        <div class="donut">
+                            <div class="innerDonutDivSmallScreen" id="iDdSs"></div>
+                            <div class="innerDonutDiv" id="iDd"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="right">
@@ -42,11 +44,12 @@
             </section>
             <!-- pulsante Rate Us -->
             <div>
-                <a id='feedback' href="feedback" title='feedback'><button type="button" id="rateUs" >RATE US</button></a>
+                <a id='feedback' href="feedback.html" title='feedback'><button type="button" id="rateUs">RATE US</button></a>
             </div>
         </main>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="/assets/js/resultsScript.js"></script>
 </body>
+
 </html>
