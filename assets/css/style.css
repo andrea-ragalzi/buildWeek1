@@ -219,17 +219,17 @@ button:hover {
 }
 
 #top {
-    position: relative;
-    font-size: 28px;
-    top: -40px;
-    left: 77px;
+    position: absolute;
+    font-size: 25px;
+    top: -30px;
+    
 }
 
 #botton {
-    position: relative;
+    position: absolute;
     font-size: 16px;
-    top: 35px;
-    left: -76px;
+    top: 50px;
+    
 }
 
 .base-timer {
@@ -281,7 +281,7 @@ button:hover {
     width: 1em;
     height: 1em;
     bottom: 2.3em;
-    left: 1.15em;
+    left: 1.23em;
     display: flex;
     align-items: center;
     justify-content: center;
