@@ -1,11 +1,16 @@
 html,body{
+  height: fit-content;
 background-image: url(../image/bg.jpg);
 background-repeat: no-repeat;
 background-size:cover;
 color: white;
 margin: 0;
-height: fit-content;
+
 }
+
+
+  
+
 
 /*divLogo*/
 #logo_div{
@@ -62,7 +67,7 @@ header{
 
 #buttons{
 margin:0 auto;
-width: 40%;
+width: 55%;
 text-align: center;
 padding-top: 100px;
 }
@@ -74,8 +79,8 @@ button{
     border-style:outset;
     border-radius: 30px;
     color: white;
-    margin: 10px;
-    width: 15em;
+    margin: 15px;
+    width: 18em;
     height: 5em;
   
 }
@@ -186,3 +191,11 @@ left: 77px;
   }
 
 
+  @media screen and (max-width: 600px){
+
+    #buttons{
+      width: fit-content;
+      
+    }
+  }
+    
