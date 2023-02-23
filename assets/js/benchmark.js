@@ -1,7 +1,7 @@
 var initPage = async () => {
     try {
-        questions = await readJsonFile(QUESTION_FILENAME)
-        questions = shuffle(questions);
+        questions = await readJsonFile(QUESTION_FILENAME);
+        questions = shuffle(selectQuestions(difficulty));
     } catch (error) {
         console.error(error);
     }
@@ -58,16 +58,15 @@ var selectQuestions = (difficulty) => {
 }
 
 var showQuestion = () => {
-    let selectedQuestions = selectQuestions(difficulty);
-    questionElem.innerHTML = selectedQuestions[currentQuestion].question;
+    questionElem.innerHTML = questions[currentQuestion].question;
     buttonsElem.innerHTML = '';
-    if (selectedQuestions[currentQuestion].type === "boolean") {
+    if (questions[currentQuestion].type === "boolean") {
         buttonsElem.innerHTML += `<button onclick="checkAnswer('True')">True</button>`;
         buttonsElem.innerHTML += `<button onclick="checkAnswer('False')">False</button>`;
     }
     else {
-        let answers = selectedQuestions[currentQuestion].incorrect_answers.concat(
-            selectedQuestions[currentQuestion].correct_answer);
+        let answers = questions[currentQuestion].incorrect_answers.concat(
+            questions[currentQuestion].correct_answer);
         shuffle(answers);
         for (let i = 0; i < answers.length; i++) {
             buttonsElem.innerHTML +=
@@ -94,6 +93,8 @@ var currentQuestion = 0;
 var score = 0;
 var encryptedScore;
 var encryptedQuestionLength;
+var difficulty = 'hard';
+
 window.onload = () => {
     startQuiz();
 }
