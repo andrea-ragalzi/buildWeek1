@@ -2,6 +2,7 @@ const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
 
+
 const COLOR_CODES = {
   info: {
     color: "green"
@@ -16,22 +17,21 @@ const COLOR_CODES = {
   }
 };
 
-var  TIME_LIMIT = 30;
+var  TIME_LIMIT;
 
-/*
-if(Difficulty=="Easy"){
 
-    TIME_LIMIT = 70;
+if(selected=="Easy"){
 
-}else if(Difficulty=="Medium"){
-   TIME_LIMIT = 50;
+    TIME_LIMIT = 30;
 
-}else if(Difficulty=="Hard"){
-   TIME_LIMIT = 30;
+}else if(selected=="Medium"){
+   TIME_LIMIT = 40;
+
+}else if(selected=="Hard"){
+   TIME_LIMIT = 60;
 
 }
-*/
-var  TIME_LIMIT = 30;
+
 let timePassed = 0;
 var timeLeft = TIME_LIMIT;
 let timerInterval = null;
