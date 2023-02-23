@@ -1,3 +1,21 @@
-const difficoltà = document.getElementById("Difficulty");
-console.log(difficoltà);
-localStorage.setItem("Difficulty",difficoltà.value);
+function selezione(){
+
+    var selectDaVerificare = document.getElementById("Difficulty");
+    var indiceSelezionato = selectDaVerificare.selectedIndex;
+
+   
+    var valoreSelezionato = selectDaVerificare.options[indiceSelezionato];
+    var testoDentroLopzione = valoreSelezionato.text;
+    
+    return testoDentroLopzione;
+}    
+    
+console.log(selezione());
+
+var button = document.getElementById('proceed');
+
+button.addEventListener('click', ()=>{
+     localStorage.setItem('difficolta', selezione());
+    console.log(selezione())
+    })
+    
