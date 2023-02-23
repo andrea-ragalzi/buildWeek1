@@ -54,6 +54,7 @@ var endQuiz = () => {
 }
 
 var showQuestion = () => {
+    
     questionElem.innerHTML = questions[currentQuestion].question;
     buttonsElem.innerHTML = '';
     if (questions[currentQuestion].type === "boolean") {
@@ -89,8 +90,6 @@ var currentQuestion = 0;
 var score = 0;
 var encryptedScore;
 var encryptedQuestionLength;
-
-
 window.onload = () => {
     startQuiz();
 }

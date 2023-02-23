@@ -16,7 +16,22 @@ const COLOR_CODES = {
   }
 };
 
-const  TIME_LIMIT = 30;
+var  TIME_LIMIT = 30;
+
+/*
+if(Difficulty=="Easy"){
+
+    TIME_LIMIT = 70;
+
+}else if(Difficulty=="Medium"){
+   TIME_LIMIT = 50;
+
+}else if(Difficulty=="Hard"){
+   TIME_LIMIT = 30;
+
+}
+*/
+var  TIME_LIMIT = 30;
 let timePassed = 0;
 var timeLeft = TIME_LIMIT;
 let timerInterval = null;
