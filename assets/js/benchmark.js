@@ -72,7 +72,7 @@ var showQuestion = () => {
                 `<button onclick="checkAnswer('${answers[i]}')">${answers[i]}</button>`;
         }
     }
-    progressElem.innerHTML = `${currentQuestion + 1}/${questions.length}`;
+    progressElem.innerHTML = `${currentQuestion + 1}<span id="violet">/${questions.length}</span>`;
 }
 
 var shuffle = (array) => {
