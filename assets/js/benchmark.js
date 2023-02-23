@@ -53,6 +53,10 @@ var endQuiz = () => {
     window.history.pushState(stateObj, pageTitle, newUrl);
 }
 
+var selectQuestionsByDifficulty = (difficulty) => {
+    return questions.filter((question) => question.difficulty === difficulty);
+}
+
 var showQuestion = () => {
     
     questionElem.innerHTML = questions[currentQuestion].question;
