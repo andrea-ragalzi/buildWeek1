@@ -1,34 +1,14 @@
 html {
-    size: 100%;
     height: 100%;
+    size: 100%;
     background-image: url(../imgs/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     font-size: larger;
+    line-height: 1.50rem;
 }
 
-div {
-    width: 40rem;
-}
-
-#difficulty{
-border-radius: 20px;
-font-size: 16px;
-color: white;
-border:2px inherit;
-background: linear-gradient(0deg, rgba(10,242,255,0.13209033613445376) 21%, rgba(210,0,148,0.1292892156862745) 80%);
-
-}
-
-#difficulty:hover{
-    box-shadow: 0 0 5px 2px #D20094;
-}
-
-#option{
-    color: black;
-   
-}
 
 
 .bg {
@@ -43,14 +23,14 @@ background: linear-gradient(0deg, rgba(10,242,255,0.13209033613445376) 21%, rgba
     padding-bottom: 50px;
 }
 
-.procedi {
 
-    width: 20%;
+.procedi {
+    width: 140px;
     height: 40px;
     background-color: aqua;
     border: none;
-
 }
+
 
 .procedi:hover {
     -webkit-box-shadow: 5px 5px 40px 14px #0AF2FF;
@@ -62,7 +42,8 @@ background: linear-gradient(0deg, rgba(10,242,255,0.13209033613445376) 21%, rgba
 }
 
 .pas{
-    padding-right: 100px;
+    padding-right: 30%;
+    padding-bottom: 30px;
 }
 .css-checkbox {
     position: absolute;
