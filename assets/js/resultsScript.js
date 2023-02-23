@@ -38,7 +38,7 @@ writeResults = () => {  //Scrive le stringhe di output dei risultati
         }
 
     //Screen < 1280px   
-    document.getElementById('iDdSs').innerHTML = `<h2>Punteggio</h2><h2>${correctPercent}%</h2><span>${correctTot} questions</span>`;
+    document.getElementById('iDdSs').innerHTML = `<h2>Score</h2><h2>${correctPercent}%</h2><span>${correctTot} questions</span>`;
 
     if(correctPercent>=60){
     document.getElementById('oBsS').innerHTML = "<p class='outerDonut1'>Congratulations!<span>You passed the exam.</span></p><p class='outerDonut2'>We'll send you the certificate in few minutes.<br> Check your email (including promotions / spam folder)</p>";
