@@ -43,9 +43,6 @@ var checkAnswer = (answer) => {
 }
 
 var endQuiz = () => {
-    questionElem.innerHTML = `Your score is ${score}/${questions.length}`;
-    buttonsElem.innerHTML = '';
-    progressElem.innerHTML = '';
     const secretKey = "mZTiZlCYMNrgOlQGFPkMskSO4EWEO5AZOc7FWtRjOyMYIhOJLSlZZICIpnvZEsxn";
     localStorage.setItem('score', CryptoJS.AES.encrypt(score.toString(), secretKey).toString());
     localStorage.setItem('questionsNumber', CryptoJS.AES.encrypt(questions.length.toString(), secretKey).toString());
