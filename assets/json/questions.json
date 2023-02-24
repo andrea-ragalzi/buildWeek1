@@ -117,8 +117,8 @@
         "category": "Science: Computers",
         "type": "multiple",
         "difficulty": "hard",
-        "question": "Inside which HTML element do we put the JavaScript?",
-        "correct_answer": "The method array.filter() returns:",
+        "question": "The method array.filter() returns:",
+        "correct_answer": "A new array",
         "incorrect_answers": [
             "Boolean",
             "Item",
