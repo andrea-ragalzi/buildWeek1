@@ -162,7 +162,7 @@
         "type": "multiple",
         "difficulty": "hard",
         "question": "What is the function of the 'delete' operator?",
-        "correct_answer": "Delete an object&#39;'s ownership",
+        "correct_answer": "Delete an object&#39;s ownership",
         "incorrect_answers": [
             "Delete an object",
             "Remove an HTML node",
