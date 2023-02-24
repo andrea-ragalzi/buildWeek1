@@ -21,7 +21,6 @@ body {
     background-attachment: fixed;
 }
 
-<<<<<<< HEAD
 
 #Difficulty{
 font-size: 16px;
@@ -37,11 +36,6 @@ box-shadow: 0 0 8px 2px #D20094;
 
 option{
   color: black;
-=======
-.masterContainer {
-    width: 80%;
-    margin: 36px auto;
->>>>>>> main
 }
 
 .masterContainer header {
