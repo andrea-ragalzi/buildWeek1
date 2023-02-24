@@ -79,7 +79,7 @@ var showQuestion = () => {
     else {
         let answers = questions[currentQuestion].incorrect_answers.concat(
             questions[currentQuestion].correct_answer);
-        shuffle(answers);
+            answers = shuffle(answers);
         for (let i = 0; i < answers.length; i++) {
             buttonsElem.innerHTML +=
                 `<button onclick="checkAnswer('${answers[i]}')">${answers[i]}</button>`;
