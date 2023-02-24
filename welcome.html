@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>QUIZ</title>
+</head>
+
+<body>
+
+    <div class="welcomeContainer masterContainer">
+        <header> 
+            <img src="assets/img/epicode_logo.png" alt="logo" class="epilogo">
+        </header>
+        <main>
+                <div class="welcomeTitle">
+                    <h1>Welcome to <b>your exam</b></h1>
+                 </div>
+
+                <div class="instructions"> 
+                    <h3>Instructions</h3>
+                    <p>We don't expect most engineers to know the answer to all of these
+                        questions, so don't worry if you're unsure of a few of them.</p>
+
+                    
+                    <ul>
+                        <li>Each question is <b>timed</b> and can only be <b>answered once.</b></li>
+                        <li>Changing browser tab or opening other windows will <b>invalidate the question</b>.</li>
+                        <li>This exam will take approx. <b>0-5 minutes</b>.</li>
+
+                    </ul>
+                    
+                </div>
+            
+            <label type="text">Set Difficulty: </label>
+
+            <select id="Difficulty" name="Difficulty" value="Easy">
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+
+            <div class="spazio">
+                <form action="benchmark.html" class="forma">
+                    <input name="cssCheckbox" id="epicheck" type="checkbox" class="css-checkbox" required>
+                    <label for="epicheck" class="pas"><b>I promise to answer myself without help from anyone</b></label>
+                    <button class="btnStyled" id="proceed">PROCEED</button>
+                </form>
+            </div>
+        </main>
+    </div>
+        <script src="assets/js/welcome.js"></script>
+</body>
+
+</html>
