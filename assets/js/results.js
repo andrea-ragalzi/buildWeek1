@@ -1,17 +1,3 @@
-const secretKey = "mZTiZlCYMNrgOlQGFPkMskSO4EWEO5AZOc7FWtRjOyMYIhOJLSlZZICIpnvZEsxn";
-const nQuestions = parseInt(CryptoJS.AES.decrypt(localStorage.getItem('questionsNumber'), secretKey).toString(CryptoJS.enc.Utf8));
-const score = parseInt(CryptoJS.AES.decrypt(localStorage.getItem('score'), secretKey).toString(CryptoJS.enc.Utf8));
-var rootEl = document.querySelector(':root');
-var rootStyle = getComputedStyle(rootEl);
-var wrongPercentText = document.getElementById('wrongPercent');
-var correctPercentText = document.getElementById('correctPercent');
-var wrongTotText = document.getElementById('wrongTot');
-var correctTotText = document.getElementById('correctTot');
-var correctPercent = (Math.floor(((score / nQuestions) * 100) * 100) / 100);
-var wrongPercent = (Math.floor((100 - correctPercent) * 100) / 100);
-var wrongTot = `${nQuestions - score}/${nQuestions}`;
-var correctTot = `${score}/${nQuestions}`;
-
 var writeResults = () => {  //Scrive le stringhe di output dei risultati
     correctPercentText.textContent = `${correctPercent}%`;
     wrongPercentText.textContent = `${wrongPercent}%`;
@@ -33,6 +19,20 @@ var writeResults = () => {  //Scrive le stringhe di output dei risultati
         document.getElementById('oBsS').innerHTML = "<p class='outerDonut1'>Ops!<span>You did not pass the exam.</span></p><p class='outerDonut2'>Seems you have to study a little more.</p>";
     }
 }
+
+const secretKey = "mZTiZlCYMNrgOlQGFPkMskSO4EWEO5AZOc7FWtRjOyMYIhOJLSlZZICIpnvZEsxn";
+const nQuestions = parseInt(CryptoJS.AES.decrypt(localStorage.getItem('questionsNumber'), secretKey).toString(CryptoJS.enc.Utf8));
+const score = parseInt(CryptoJS.AES.decrypt(localStorage.getItem('score'), secretKey).toString(CryptoJS.enc.Utf8));
+var rootEl = document.querySelector(':root');
+var rootStyle = getComputedStyle(rootEl);
+var wrongPercentText = document.getElementById('wrongPercent');
+var correctPercentText = document.getElementById('correctPercent');
+var wrongTotText = document.getElementById('wrongTot');
+var correctTotText = document.getElementById('correctTot');
+var correctPercent = (Math.floor(((score / nQuestions) * 100) * 100) / 100);
+var wrongPercent = (Math.floor((100 - correctPercent) * 100) / 100);
+var wrongTot = `${nQuestions - score}/${nQuestions}`;
+var correctTot = `${score}/${nQuestions}`;
 
 window.onload = () => { // Al caricamento della pagina avvia l'animazione del grafico
     var pos = 100; //L'animazione è al contrario, il 100 è lo "0"
