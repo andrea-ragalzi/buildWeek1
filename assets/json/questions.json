@@ -120,9 +120,9 @@
         "question": "The method array.filter() returns:",
         "correct_answer": "A new array",
         "incorrect_answers": [
-            "Boolean",
-            "Item",
-            "An old array"
+            "meta",
+            "body",
+            "head"
         ]
     },
     {
@@ -151,7 +151,7 @@
         "category": "Science: Computers",
         "type": "boolean",
         "difficulty": "hard",
-        "question": "The external JavaScript file must contain the tag <script>.",
+        "question": "The external JavaScript file must contain the tag &lt;script&gt;.",
         "correct_answer": "False",
         "incorrect_answers": [
             "True"
@@ -161,8 +161,8 @@
         "category": "Science: Computers",
         "type": "multiple",
         "difficulty": "hard",
-        "question": "What is the function of the 'delete' operator?",
-        "correct_answer": "Delete an object's ownership",
+        "question": "What is the function of the delete operator?",
+        "correct_answer": "Delete an object s ownership",
         "incorrect_answers": [
             "Delete an object",
             "Remove an HTML node",
@@ -197,7 +197,7 @@
         "category": "Science: Computers",
         "type": "multiple",
         "difficulty": "hard",
-        "question": "What does document.querySelector('#test') do when there are no items with test id in the DOM?",
+        "question": "What does document.querySelector(#test) do when there are no items with test id in the DOM?",
         "correct_answer": "null",
         "incorrect_answers": [
             "[]",

@@ -3,9 +3,11 @@ var initPage = async () => {
         questions = await readJsonFile(QUESTION_FILENAME);
         let difficulty = localStorage.getItem('difficolta').toLocaleLowerCase();
         questions = shuffle(selectQuestions(difficulty));
-        console.log(questions);
+        localStorage.setItem('questions', questions);
+      
     } catch (error) {
         console.error(error);
+        console.log('pluto');
     }
 }
 
@@ -67,6 +69,9 @@ var selectQuestions = (difficulty) => {
 var showQuestion = () => {
     questionElem.innerHTML = questions[currentQuestion].question;
     buttonsElem.innerHTML = '';
+    localStorage.setItem('currentDifficolta',questions[currentQuestion].difficulty);
+    questionTime=dif(localStorage.getItem("currentDifficolta"));
+
     if (questions[currentQuestion].type === "boolean") {
         buttonsElem.innerHTML += `<button onclick="checkAnswer('True')">True</button>`;
         buttonsElem.innerHTML += `<button onclick="checkAnswer('False')">False</button>`;
@@ -74,7 +79,7 @@ var showQuestion = () => {
     else {
         let answers = questions[currentQuestion].incorrect_answers.concat(
             questions[currentQuestion].correct_answer);
-        shuffle(answers);
+            answers = shuffle(answers);
         for (let i = 0; i < answers.length; i++) {
             buttonsElem.innerHTML +=
                 `<button onclick="checkAnswer('${answers[i]}')">${answers[i]}</button>`;
@@ -100,6 +105,7 @@ var currentQuestion = 0;
 var score = 0;
 var encryptedScore;
 var encryptedQuestionLength;
+var questionTime;
 
 window.onload = () => {
     startQuiz();
