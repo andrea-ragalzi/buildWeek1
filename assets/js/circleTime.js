@@ -1,9 +1,10 @@
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
+var timeLimit=0;
+const difficolta = localStorage.getItem("currentDifficolta");
 
-const difficolta=localStorage.getItem("difficolta");
-console.log(difficolta);
+
 const COLOR_CODES = {
   info: {
     color: "green"
@@ -18,27 +19,25 @@ const COLOR_CODES = {
   }
 };
 
-var dif= (difficolta)=>{
-  
-  if(difficolta==="Easy"){
-    
-    return TIME_LIMIT = 30;
- 
- }else if(difficolta==="Medium"){
-    return TIME_LIMIT = 40;
- 
- }else if(difficolta==="Hard"){
-   return TIME_LIMIT = 60;
- 
- }
 
+
+var dif = (difficolta) => {
+  if (difficolta === "easy") {
+    timeLimit = 30;
+
+  }
+  else {
+    timeLimit = 60;
+  
+  }
+  return timeLimit;
 }
 
-var TIME_LIMIT;
-dif(difficolta);
+
+
 
 let timePassed = 0;
-var timeLeft = TIME_LIMIT;
+var timeLeft = timeLimit;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
 
@@ -61,8 +60,8 @@ document.getElementById("app").innerHTML = `
     </g>
   </svg>
   <span id="base-timer-label" class="base-timer__label">${formatTime(
-    timeLeft
-  )}</span>
+  timeLeft
+)}</span>
 </div>
 `;
 startTimer();
@@ -71,8 +70,8 @@ function onTimesUp() {
   clearInterval(timerInterval);
 }
 
-function restartTime(){
-  timePassed=-1;
+function restartTime() {
+  timePassed = -1;
   onTimesUp();
   startTimer();
 }
@@ -80,24 +79,24 @@ function restartTime(){
 
 
 
- function startTimer() {
+function startTimer() {
 
   timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
-    timeLeft = TIME_LIMIT - timePassed;
+    timeLeft = timeLimit - timePassed;
     document.getElementById("base-timer-label").innerHTML = `<span id=top>Second</span>${formatTime(
       timeLeft
     )}<span id=botton>Remaning</span> `;
     setCircleDasharray();
     setRemainingPathColor(timeLeft);
 
-    if (timeLeft ===0) {
+    if (timeLeft === 0) {
       onTimesUp();
       restartTime();
       setRemainingPathColorRestart(timeLeft);
       checkAnswer(-1);
 
-   }
+    }
   }, 1000);
 }
 
@@ -136,22 +135,22 @@ function setRemainingPathColorRestart(timeLeft) {
   console.log(timeLeft);
   const { alert, warning, info } = COLOR_CODES;
   document
-  .getElementById("base-timer-path-remaining")
-  .classList.remove(alert.color);
+    .getElementById("base-timer-path-remaining")
+    .classList.remove(alert.color);
   document
-  .getElementById("base-timer-path-remaining")
-  .classList.remove(warning.color);
+    .getElementById("base-timer-path-remaining")
+    .classList.remove(warning.color);
   document
-  .getElementById("base-timer-path-remaining")
-  .classList.add(info.color);
+    .getElementById("base-timer-path-remaining")
+    .classList.add(info.color);
 
 
- 
+
 }
 
 function calculateTimeFraction() {
-  const rawTimeFraction = timeLeft / TIME_LIMIT;
-  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+  const rawTimeFraction = timeLeft / timeLimit;
+  return rawTimeFraction - (1 / timeLimit) * (1 - rawTimeFraction);
 }
 
 function setCircleDasharray() {
