@@ -47,10 +47,18 @@ h6 {
 }
 
 /* Pushdowns */
-.resultsContainer .title, .output, /*results*/
-#feedbackDiv h1, #feedbackDiv p, #starList, /*feedback*/
-.welcomeContainer .welcomeTitle, .welcomeContainer .instructions p /*welcome*/
-{
+.resultsContainer .title,
+.output,
+/*results*/
+#feedbackDiv h1,
+#feedbackDiv p,
+#starList,
+/*feedback*/
+.welcomeContainer .welcomeTitle,
+.welcomeContainer .instructions p
+
+/*welcome*/
+    {
     margin-bottom: 48px;
 }
 
@@ -168,11 +176,12 @@ h6 {
 }
 
 /* BENCHMARK PAGE */
-#logo_div { 
+#logo_div {
     width: 75%;
 }
 
-#question, #buttons {
+#question,
+#buttons {
     margin: 0 auto 46px;
 }
 
@@ -438,8 +447,37 @@ button:hover {
 }
 
 #feedbackFooter {
-    border-top: solid #900080; 
+    border-top: solid #900080;
     padding-top: 46px;
+}
+
+/* 404 PAGE */
+#wrap404 main,
+#wrap404 footer {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#wrap404 main img {
+    width: 60%;
+}
+
+#wrap404 h1 {
+    font-size: 2.5em;
+}
+
+#wrap404 h2 {
+    font-size: 1.5em;
+}
+
+#wrap404 a {
+    color: white;
+    font-size: 1.5em;
+}
+
+#wrap404 a:visited {
+    color: rgb(160, 160, 160);
 }
 
 /* Benchamrk */
@@ -479,31 +517,4 @@ button:hover {
     .resultsContainer .outerDonut1 span {
         color: #00ffff;
     }
-}
-
-/* 404 PAGE */
-#wrap404 main, #wrap404 footer {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-}
-
-#wrap404 main img {
-    width: 60%;
-}
-
-#wrap404 h1 {
-    font-size: 2.5em;
-}
-
-#wrap404 h2 {
-    font-size: 1.5em;
-}
-
-#wrap404 a {
-    color: white;
-}
-
-#wrap404 a:visited {
-    color: rgb(160, 160, 160);
 }
