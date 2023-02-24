@@ -11,5 +11,5 @@ browser per tornare alla pagina precedente se non siamo sulla pagina corrente.
 */
 window.history.pushState(null, null, window.location.href);
 window.onpopstate = function (event) {
-    window.history.go(1);
+    window.history.go(window.location.href);
 };
