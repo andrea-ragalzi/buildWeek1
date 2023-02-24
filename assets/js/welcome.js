@@ -14,6 +14,5 @@ var button = document.getElementById('proceed');
 
 button.addEventListener('click', () => {
     localStorage.setItem('difficolta', selezione());
-    console.log(selezione())
 })
 
