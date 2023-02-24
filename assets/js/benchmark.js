@@ -5,6 +5,7 @@ var initPage = async () => {
         questions = shuffle(selectQuestions(difficulty));
     } catch (error) {
         console.error(error);
+        console.log('pluto');
     }
 }
 
