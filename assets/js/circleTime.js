@@ -131,8 +131,6 @@ function setRemainingPathColor(timeLeft) {
 }
 
 function setRemainingPathColorRestart(timeLeft) {
-
-  console.log(timeLeft);
   const { alert, warning, info } = COLOR_CODES;
   document
     .getElementById("base-timer-path-remaining")
