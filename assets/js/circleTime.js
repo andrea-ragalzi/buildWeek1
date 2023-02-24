@@ -23,7 +23,7 @@ const COLOR_CODES = {
 
 var dif = (difficolta) => {
   if (difficolta === "easy") {
-    timeLimit = 60;
+    timeLimit = 30;
   }
   else {
     timeLimit = 60;

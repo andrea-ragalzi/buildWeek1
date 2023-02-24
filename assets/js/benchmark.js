@@ -69,7 +69,7 @@ var showQuestion = () => {
     questionElem.innerHTML = questions[currentQuestion].question;
     buttonsElem.innerHTML = '';
     localStorage.setItem('currentDifficolta',questions[currentQuestion].difficulty);
-    dif(dif);
+    dif(difi);
 
     if (questions[currentQuestion].type === "boolean") {
         buttonsElem.innerHTML += `<button onclick="checkAnswer('True')">True</button>`;
@@ -99,7 +99,7 @@ const QUESTION_FILENAME = './assets/json/questions.json';
 const questionElem = document.getElementById('question');
 const buttonsElem = document.getElementById('buttons');
 const progressElem = document.getElementById('progress');
-//const dif=localStorage.getItem("currentDifficolta");
+const difi=localStorage.getItem("currentDifficolta");
 var questions;
 var currentQuestion = 0;
 var score = 0;
