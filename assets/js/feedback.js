@@ -48,3 +48,16 @@ var unColorStar = (minIndex) => {
 }
 
 var stars = createStars();
+for (let i = 0; i < stars.length; i++) {
+    let star = stars[i];
+    star.html.addEventListener("mouseover", function () {
+      colorStar(i);
+    });
+    star.html.addEventListener("click", function () {
+      clickedStar(i);
+      unColorStar(i);
+    })
+    star.html.addEventListener("mouseout", function () {
+      unColorStar(i);
+    });
+  }
