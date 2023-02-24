@@ -112,5 +112,119 @@
             "C",
             "Jakarta"
         ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "Inside which HTML element do we put the JavaScript?",
+        "correct_answer": "The method array.filter() returns:",
+        "incorrect_answers": [
+            "Boolean",
+            "Item",
+            "An old array"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "A callback is ____ that is passed into a function as an argument",
+        "correct_answer": "a function",
+        "incorrect_answers": [
+            "un object",
+            "a promise",
+            "a request"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "boolean",
+        "difficulty": "hard",
+        "question": "The logo for Instagram is a polaroid.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "boolean",
+        "difficulty": "hard",
+        "question": "The external JavaScript file must contain the tag <script>.",
+        "correct_answer": "False",
+        "incorrect_answers": [
+            "True"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "What is the function of the 'delete' operator?",
+        "correct_answer": "Delete an object's ownership",
+        "incorrect_answers": [
+            "Delete an object",
+            "Remove an HTML node",
+            "JS does not have a delete operator"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "What is the first parameter of element.addEventListener for?",
+        "correct_answer": "Event type",
+        "incorrect_answers": [
+            "Callback",
+            "Caller",
+            "None of the above"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "You want to process each item in a list and return a list again, which method would you use?",
+        "correct_answer": "map",
+        "incorrect_answers": [
+            "forEach",
+            "find",
+            "contains"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "What does document.querySelector('#test') do when there are no items with test id in the DOM?",
+        "correct_answer": "null",
+        "incorrect_answers": [
+            "[]",
+            "undefined",
+            "error"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "boolean",
+        "difficulty": "hard",
+        "question": "Synchronous code is also called non-blocking",
+        "correct_answer": "False",
+        "incorrect_answers": [
+            "True"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "A callback is:",
+        "correct_answer": "a function that will be called at some point in the future",
+        "incorrect_answers": [
+            "an http request ",
+            "an http response",
+            "An asynchronous operation"
+        ]
     }
 ]
