@@ -1,13 +1,13 @@
-                //InitPage
 var initPage = async () => {
     try {
-        questions = await readJsonFile(QUESTION_FILENAME)
-        questions = shuffle(questions);
+        questions = await readJsonFile(QUESTION_FILENAME);
+        let difficulty = localStorage.getItem('difficolta');
+        questions = shuffle(selectQuestions(difficulty));
     } catch (error) {
         console.error(error);
     }
 }
-                //ReadFileJson
+
 var readJsonFile = async (filename) => {
     try {
         const response = await fetch(filename);
@@ -20,7 +20,7 @@ var readJsonFile = async (filename) => {
         console.error(error);
     }
 }
-                //StartQuiz
+
 var startQuiz = async () => {
     try {
         await initPage();
@@ -29,7 +29,7 @@ var startQuiz = async () => {
         console.error(error);
     }
 }
-                //CheckAnswer
+
 var checkAnswer = (answer) => {
     if (answer === questions[currentQuestion].correct_answer) {
         score++;
@@ -38,17 +38,26 @@ var checkAnswer = (answer) => {
     if (currentQuestion === questions.length) {
         endQuiz();
     } else {
+        restartTime();
         showQuestion();
     }
 }
-                //EndQuiz
+
 var endQuiz = () => {
-    questionElem.innerHTML = `Your score is ${score}/${questions.length}`;
-    buttonsElem.innerHTML = '';
-    progressElem.innerHTML = '';
-    app.innerHTML="";
+    const secretKey = "mZTiZlCYMNrgOlQGFPkMskSO4EWEO5AZOc7FWtRjOyMYIhOJLSlZZICIpnvZEsxn";
+    localStorage.setItem('score', CryptoJS.AES.encrypt(score.toString(), secretKey).toString());
+    localStorage.setItem('questionsNumber', CryptoJS.AES.encrypt(questions.length.toString(), secretKey).toString());
+    window.location.href = 'results.html';
+    const stateObj = { page: "404" };
+    const pageTitle = "404 - Benchmark";
+    const newUrl = "404.html";
+    window.history.pushState(stateObj, pageTitle, newUrl);
 }
-                //showQuestion
+
+var selectQuestions = (difficulty) => {
+    return questions.filter((question) => question.difficulty === difficulty);
+}
+
 var showQuestion = () => {
     questionElem.innerHTML = questions[currentQuestion].question;
     buttonsElem.innerHTML = '';
@@ -65,11 +74,9 @@ var showQuestion = () => {
                 `<button onclick="checkAnswer('${answers[i]}')">${answers[i]}</button>`;
         }
     }
-    progressElem.innerHTML = `Question: ${currentQuestion + 1} <span id="violet">/${questions.length}</span>`;
-    restartTime();
+    progressElem.innerHTML = `${currentQuestion + 1}<span id="violet">/${questions.length}</span>`;
 }
 
-                //shuffleArray
 var shuffle = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -77,25 +84,17 @@ var shuffle = (array) => {
     }
     return array;
 }
-                //VariabiliGlobali
-const QUESTION_FILENAME = '/assets/json/questions.json';
+
+const QUESTION_FILENAME = './assets/json/questions.json';
 const questionElem = document.getElementById('question');
 const buttonsElem = document.getElementById('buttons');
 const progressElem = document.getElementById('progress');
-const app= document.getElementById('app');
 var questions;
-let currentQuestion = 0;
-let score = 0;
+var currentQuestion = 0;
+var score = 0;
+var encryptedScore;
+var encryptedQuestionLength;
 
-                 //LoadPage
 window.onload = () => {
     startQuiz();
 }
-
-
-
-
-
-
-
-

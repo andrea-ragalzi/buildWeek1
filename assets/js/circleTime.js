@@ -2,6 +2,8 @@ const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
 
+const difficolta=localStorage.getItem("difficolta");
+console.log(difficolta);
 const COLOR_CODES = {
   info: {
     color: "green"
@@ -16,7 +18,25 @@ const COLOR_CODES = {
   }
 };
 
-const  TIME_LIMIT = 30;
+var dif= (difficolta)=>{
+  
+  if(difficolta==="Easy"){
+    
+    return TIME_LIMIT = 30;
+ 
+ }else if(difficolta==="Medium"){
+    return TIME_LIMIT = 40;
+ 
+ }else if(difficolta==="Hard"){
+   return TIME_LIMIT = 60;
+ 
+ }
+
+}
+
+var TIME_LIMIT;
+dif(difficolta);
+
 let timePassed = 0;
 var timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -93,7 +113,6 @@ function formatTime(time) {
 }
 
 function setRemainingPathColor(timeLeft) {
-  console.log(timeLeft);
   const { alert, warning, info } = COLOR_CODES;
   if (timeLeft <= alert.threshold) {
     document
