@@ -1,8 +1,9 @@
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
+var timeLimit=30;
+const difficolta=localStorage.getItem("currentDifficolta");
 
-const difficolta=localStorage.getItem("difficolta");
 console.log(difficolta);
 const COLOR_CODES = {
   info: {
@@ -18,27 +19,22 @@ const COLOR_CODES = {
   }
 };
 
+
+
 var dif= (difficolta)=>{
   
-  if(difficolta==="Easy"){
-    
-    return TIME_LIMIT = 30;
- 
- }else if(difficolta==="Medium"){
-    return TIME_LIMIT = 40;
- 
- }else if(difficolta==="Hard"){
-   return TIME_LIMIT = 60;
- 
+console.log(difficolta);
+  if(difficolta==="hard"){    
+     timeLimit = 60;
  }
-
+ return timeLimit;
 }
 
-var TIME_LIMIT;
-dif(difficolta);
+
+
 
 let timePassed = 0;
-var timeLeft = TIME_LIMIT;
+var timeLeft = timeLimit;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
 
@@ -84,7 +80,7 @@ function restartTime(){
 
   timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
-    timeLeft = TIME_LIMIT - timePassed;
+    timeLeft = timeLimit - timePassed;
     document.getElementById("base-timer-label").innerHTML = `<span id=top>Second</span>${formatTime(
       timeLeft
     )}<span id=botton>Remaning</span> `;
@@ -150,8 +146,8 @@ function setRemainingPathColorRestart(timeLeft) {
 }
 
 function calculateTimeFraction() {
-  const rawTimeFraction = timeLeft / TIME_LIMIT;
-  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+  const rawTimeFraction = timeLeft / timeLimit;
+  return rawTimeFraction - (1 / timeLimit) * (1 - rawTimeFraction);
 }
 
 function setCircleDasharray() {
