@@ -4,7 +4,7 @@ var initPage = async () => {
         let difficulty = localStorage.getItem('difficolta').toLocaleLowerCase();
         questions = shuffle(selectQuestions(difficulty));
         localStorage.setItem('questions', questions);
-        console.log(questions);
+      
     } catch (error) {
         console.error(error);
     }

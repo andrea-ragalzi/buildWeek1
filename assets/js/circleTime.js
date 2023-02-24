@@ -4,7 +4,7 @@ const ALERT_THRESHOLD = 5;
 var timeLimit=0;
 const difficolta = localStorage.getItem("currentDifficolta");
 
-console.log(difficolta);
+
 const COLOR_CODES = {
   info: {
     color: "green"
