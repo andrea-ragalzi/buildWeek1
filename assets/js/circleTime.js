@@ -1,8 +1,8 @@
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
-var timeLimit=30;
-const difficolta=localStorage.getItem("currentDifficolta");
+var timeLimit;
+const difficolta = localStorage.getItem("currentDifficolta");
 
 console.log(difficolta);
 const COLOR_CODES = {
@@ -21,13 +21,14 @@ const COLOR_CODES = {
 
 
 
-var dif= (difficolta)=>{
-  
-console.log(difficolta);
-  if(difficolta==="hard"){    
-     timeLimit = 60;
- }
- return timeLimit;
+var dif = (difficolta) => {
+  if (difficolta === "easy") {
+    timeLimit = 60;
+  }
+  else {
+    timeLimit = 60;
+  }
+  return timeLimit;
 }
 
 
@@ -57,8 +58,8 @@ document.getElementById("app").innerHTML = `
     </g>
   </svg>
   <span id="base-timer-label" class="base-timer__label">${formatTime(
-    timeLeft
-  )}</span>
+  timeLeft
+)}</span>
 </div>
 `;
 startTimer();
@@ -67,8 +68,8 @@ function onTimesUp() {
   clearInterval(timerInterval);
 }
 
-function restartTime(){
-  timePassed=-1;
+function restartTime() {
+  timePassed = -1;
   onTimesUp();
   startTimer();
 }
@@ -76,7 +77,7 @@ function restartTime(){
 
 
 
- function startTimer() {
+function startTimer() {
 
   timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
@@ -87,13 +88,13 @@ function restartTime(){
     setCircleDasharray();
     setRemainingPathColor(timeLeft);
 
-    if (timeLeft ===0) {
+    if (timeLeft === 0) {
       onTimesUp();
       restartTime();
       setRemainingPathColorRestart(timeLeft);
       checkAnswer(-1);
 
-   }
+    }
   }, 1000);
 }
 
@@ -132,17 +133,17 @@ function setRemainingPathColorRestart(timeLeft) {
   console.log(timeLeft);
   const { alert, warning, info } = COLOR_CODES;
   document
-  .getElementById("base-timer-path-remaining")
-  .classList.remove(alert.color);
+    .getElementById("base-timer-path-remaining")
+    .classList.remove(alert.color);
   document
-  .getElementById("base-timer-path-remaining")
-  .classList.remove(warning.color);
+    .getElementById("base-timer-path-remaining")
+    .classList.remove(warning.color);
   document
-  .getElementById("base-timer-path-remaining")
-  .classList.add(info.color);
+    .getElementById("base-timer-path-remaining")
+    .classList.add(info.color);
 
 
- 
+
 }
 
 function calculateTimeFraction() {
