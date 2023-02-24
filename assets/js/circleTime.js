@@ -1,7 +1,7 @@
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
-var timeLimit;
+var timeLimit=0;
 const difficolta = localStorage.getItem("currentDifficolta");
 
 console.log(difficolta);
@@ -24,9 +24,11 @@ const COLOR_CODES = {
 var dif = (difficolta) => {
   if (difficolta === "easy") {
     timeLimit = 30;
+
   }
   else {
     timeLimit = 60;
+  
   }
   return timeLimit;
 }
