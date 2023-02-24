@@ -316,17 +316,6 @@ button:hover {
     text-align: center;
 }
 
-#feedbackMoreInfo {
-    color: black;
-    font-family: 'Outfit', sans-serif;
-    font-weight: bold;
-    padding: 0.6em;
-    border: transparent;
-    background-color: #00FFFF;
-    width: 130px;
-    box-shadow: 0px 0px 40px 0px #00ffffa9;
-}
-
 .resultsContainer .title span {
     font-size: 1.6em;
 }
