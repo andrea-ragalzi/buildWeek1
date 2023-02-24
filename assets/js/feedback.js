@@ -19,7 +19,7 @@ var clickedStar = (indexStar) => {
 var colorStar = (maxIndex) => {
   for (let i = 0; i <= maxIndex; i++) {
     let star = stars[i];
-    star.html.style.filter = "grayscale(0%)";
+    star.html.style.filter = "brightness(1)";
   }
 }
 
@@ -39,10 +39,10 @@ var unColorStar = (minIndex) => {
   for (let i = 0; i < stars.length; i++) {
     let star = stars[i];
     if (star.clicked) {
-      star.html.style.filter = "grayscale(0%)";
+      star.html.style.filter = "brightness(1)";
     }
     else {
-      star.html.style.filter = "grayscale(100%)";
+      star.html.style.filter = "brightness(0)";
     }
   }
 }
@@ -56,6 +56,7 @@ for (let i = 0; i < stars.length; i++) {
   });
   star.html.addEventListener("click", function () {
     clickedStar(i);
+    unColorStar(i);
   })
   star.html.addEventListener("mouseout", function () {
     unColorStar(i);

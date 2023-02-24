@@ -3,14 +3,20 @@
 
 html,
 body {
-    width: 100%;
     margin: 0;
     padding: 0;
-    background-image: url(/assets/img/bg.jpg);
+    box-sizing: border-box;
+    background-image: url(/assets/imgs/bg.jpg);
+    background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Inter', sans-serif;
+    color: white;
 }
 
-header #logo {
+/* FEEDBACK PAGE */
+
+#feedbackLogo {
     height: 40px;
     padding: 3%;
 }
@@ -20,7 +26,7 @@ header #logo {
 
 }
 
-h1 {
+#feedbackH1 {
     margin-top: 0%;
     text-align: center;
     color: white;
@@ -28,7 +34,7 @@ h1 {
     font-size: 60px;
 }
 
-h3 {
+#feedbackH3 {
     text-align: center;
     color: white;
     font-family: 'Inter', sans-serif;
@@ -43,13 +49,13 @@ h3 {
 
 .star {
     margin: 0 auto;
-    margin-right: 10px;
+    margin-right: 5px;
     padding-bottom: 10px;
-    filter: grayscale(100%);
+    filter:brightness(0);
     display: inline;
 }
 
-input {
+#feedbackInput {
     font-family: 'Inter', sans-serif;
     font-size: 13px;
     color: white;
@@ -62,30 +68,27 @@ input {
 
 }
 
-div #commento {
+#feedbackText {
     text-align: center;
     padding-bottom: 4em;
 }
 
-footer {
+#feedbackFooter {
     text-align: center;
 }
 
-button {
+#feedbackMoreInfo {
+    color: black;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    padding: 0.6em;
     border: transparent;
     background-color: #00FFFF;
     width: 130px;
     box-shadow: 0px 0px 40px 0px #00ffffa9;
 }
 
-button:hover {
+#feedbackMoreInfo:hover {
 
     box-shadow: 0px 0px 60px 0px #00FFFF;
-}
-
-#moreInfo {
-    color: black;
-    font-family: 'Outfit', sans-serif;
-    font-weight: bold;
-    padding: 0.6em;
 }
