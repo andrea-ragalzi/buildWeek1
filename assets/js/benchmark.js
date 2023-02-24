@@ -1,6 +1,8 @@
 var initPage = async () => {
     try {
         questions = await readJsonFile(QUESTION_FILENAME);
+        let difficulty = localStorage.getItem(
+            localStorage.getItem('difficolta'));;
         questions = shuffle(selectQuestions(difficulty));
     } catch (error) {
         console.error(error);
@@ -93,7 +95,6 @@ var currentQuestion = 0;
 var score = 0;
 var encryptedScore;
 var encryptedQuestionLength;
-var difficulty = 'Hard';
 
 window.onload = () => {
     startQuiz();
