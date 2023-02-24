@@ -118,11 +118,11 @@
         "type": "multiple",
         "difficulty": "hard",
         "question": "Inside which HTML element do we put the JavaScript?",
-        "correct_answer": "The method array.filter() returns:",
+        "correct_answer": "script",
         "incorrect_answers": [
-            "Boolean",
-            "Item",
-            "An old array"
+            "meta",
+            "body",
+            "head"
         ]
     },
     {
@@ -151,7 +151,7 @@
         "category": "Science: Computers",
         "type": "boolean",
         "difficulty": "hard",
-        "question": "The external JavaScript file must contain the tag <script>.",
+        "question": "The external JavaScript file must contain the tag &lt;script&gt;.",
         "correct_answer": "False",
         "incorrect_answers": [
             "True"
