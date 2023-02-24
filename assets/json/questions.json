@@ -161,7 +161,7 @@
         "category": "Science: Computers",
         "type": "multiple",
         "difficulty": "hard",
-        "question": "What is the function of the 'delete' operator?",
+        "question": "What is the function of the delete operator?",
         "correct_answer": "Delete an object&#39;s ownership",
         "incorrect_answers": [
             "Delete an object",
@@ -197,7 +197,7 @@
         "category": "Science: Computers",
         "type": "multiple",
         "difficulty": "hard",
-        "question": "What does document.querySelector('#test') do when there are no items with test id in the DOM?",
+        "question": "What does document.querySelector(#test) do when there are no items with test id in the DOM?",
         "correct_answer": "null",
         "incorrect_answers": [
             "[]",
