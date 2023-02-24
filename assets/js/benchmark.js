@@ -1,8 +1,10 @@
 var initPage = async () => {
     try {
         questions = await readJsonFile(QUESTION_FILENAME);
-        let difficulty = localStorage.getItem('difficolta');
+        let difficulty = localStorage.getItem('difficolta').toLocaleLowerCase();
         questions = shuffle(selectQuestions(difficulty));
+        localStorage.setItem('questions', questions);
+      
     } catch (error) {
         console.error(error);
     }
@@ -55,12 +57,20 @@ var endQuiz = () => {
 }
 
 var selectQuestions = (difficulty) => {
+    if (difficulty === 'medium') {
+        let easyQuestions = shuffle(selectQuestions('easy')).slice(0, 5);
+        let hardQuestions = shuffle(selectQuestions('hard')).slice(0, 5);
+        return shuffle(easyQuestions.concat(hardQuestions));
+    }
     return questions.filter((question) => question.difficulty === difficulty);
 }
 
 var showQuestion = () => {
     questionElem.innerHTML = questions[currentQuestion].question;
     buttonsElem.innerHTML = '';
+    localStorage.setItem('currentDifficolta',questions[currentQuestion].difficulty);
+    questionTime=dif(localStorage.getItem("currentDifficolta"));
+
     if (questions[currentQuestion].type === "boolean") {
         buttonsElem.innerHTML += `<button onclick="checkAnswer('True')">True</button>`;
         buttonsElem.innerHTML += `<button onclick="checkAnswer('False')">False</button>`;
@@ -94,6 +104,7 @@ var currentQuestion = 0;
 var score = 0;
 var encryptedScore;
 var encryptedQuestionLength;
+var questionTime;
 
 window.onload = () => {
     startQuiz();

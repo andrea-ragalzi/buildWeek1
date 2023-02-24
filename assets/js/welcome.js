@@ -9,8 +9,6 @@ function selezione(){
     
     return testoDentroLopzione;
 }    
-    
-console.log(selezione());
 
 var button = document.getElementById('proceed');
 
