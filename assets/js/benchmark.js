@@ -1,8 +1,9 @@
 var initPage = async () => {
     try {
         questions = await readJsonFile(QUESTION_FILENAME);
-        let difficulty = localStorage.getItem('difficolta');
+        let difficulty = localStorage.getItem('difficolta').toLocaleLowerCase();
         questions = shuffle(selectQuestions(difficulty));
+        console.log(questions);
     } catch (error) {
         console.error(error);
     }
