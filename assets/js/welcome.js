@@ -1,6 +1,6 @@
 var selezione = () => {
-    const indiceSelezionato =
-        document.getElementById("Difficulty").selectedIndex;
+    var selectDaVerificare = document.getElementById("Difficulty");
+    var indiceSelezionato = selectDaVerificare.selectedIndex;
     var valoreSelezionato = selectDaVerificare.options[indiceSelezionato];
     var testoDentroLopzione = valoreSelezionato.text;
     return testoDentroLopzione;
