@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfitital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Interital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&&display=swap');
+
+/*Globale*/
+:root {
+    --percentage: 100;
+    /* Utilizza la percentuale delle wrong! Parte da 100 per logica di stile */
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(/assets/img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    height: 100%;
+}
+
+
+.masterContainer {
+    width: 80%;
+    margin: 36px auto;
+}
+
+.masterContainer header {
+    margin-bottom: 36px;
+}
+
+.masterContainer header img {
+    width: 250px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 4em;
+    font-weight: 100;
+    margin: 0;
+}
+
+/* Pushdowns */
+.resultsContainer .title, .output, /*results*/
+#feedbackDiv h1, #feedbackDiv p, #starList, /*feedback*/
+.welcomeContainer .welcomeTitle, .welcomeContainer .instructions p /*welcome*/
+{
+    margin-bottom: 48px;
+}
+
+/* Form Buttons */
+.btnStyled {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    -webkit-box-shadow: 5px 5px 40px 14px #0AF2FF70;
+    box-shadow: 0px 0px 40px 0px #0af3ff70;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2em;
+    padding: 1em 3em;
+}
+
+.btnStyled:hover {
+    color: #000000;
+    font-weight: bold;
+    background-color: #00FFFF;
+    font-weight: bold;
+    -webkit-box-shadow: 5px 5px 40px 14px #0AF2FF;
+    box-shadow: 0px 0px 40px 0px #0AF2FF;
+    border-color: #00FFFF;
+}
+
+.welcomeContainer .welcomeTitle {
+    width: 30%;
+    line-height: 3em;
+}
+
+.welcomeContainer h3 {
+    font-size: 30px;
+    color: #D20094;
+    font-weight: bold;
+}
+
+.welcomeContainer .instructions p {
+    width: 56%;
+}
+
+.welcomeContainer .instructions ul {
+    line-height: 2em;
+    padding-inline-start: 1.2em;
+}
+
+.welcomeContainer #Difficulty {
+    font-size: 16px;
+    background: none;
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgba(10, 242, 255, 0.13209033613445376) 21%, rgba(210, 0, 148, 0.1292892156862745) 80%);
+    color: white;
+    margin-bottom: 8em;
+}
+
+.welcomeContainer #Difficulty:hover {
+    box-shadow: 0 0 8px 2px #D20094;
+}
+
+.welcomeContainer option {
+    color: black;
+}
+
+.welcomeContainer .pas {
+    padding-right: 30%;
+    padding-bottom: 30px;
+}
+
+.welcomeContainer .css-checkbox {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.welcomeContainer .css-checkbox+label {
+    position: relative;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    height: 22px;
+    color: white;
+}
+
+.welcomeContainer .css-checkbox+label::before {
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    box-shadow: none;
+}
+
+.welcomeContainer .css-checkbox:checked+label::after {
+    content: " ";
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTczLjg5OCA0MzkuNDA0bC0xNjYuNC0xNjYuNGMtOS45OTctOS45OTctOS45OTctMjYuMjA2IDAtMzYuMjA0bDM2LjIwMy0zNi4yMDRjOS45OTctOS45OTggMjYuMjA3LTkuOTk4IDM2LjIwNCAwTDE5MiAzMTIuNjkgNDMyLjA5NSA3Mi41OTZjOS45OTctOS45OTcgMjYuMjA3LTkuOTk3IDM2LjIwNCAwbDM2LjIwMyAzNi4yMDRjOS45OTcgOS45OTcgOS45OTcgMjYuMjA2IDAgMzYuMjA0bC0yOTQuNCAyOTQuNDAxYy05Ljk5OCA5Ljk5Ny0yNi4yMDcgOS45OTctMzYuMjA0LS4wMDF6Ii8+PC9zdmc+");
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-position: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    height: 22px;
+    width: 22px;
+}
+
+/* BENCHMARK PAGE */
+#logo_div { 
+    width: 75%;
+}
+
+#question, #buttons {
+    margin: 0 auto 46px;
+}
+
+/*contenitore del corpo*/
+#benchmarkContainer header {
+    height: 30vh;
+    display: flex;
+}
+
+/*Container*/
+#question-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*StyleQuestion*/
+#question {
+    /* margin: 0 auto; */
+    width: 90%;
+    text-align: center;
+    font-size: 30px;
+}
+
+/*StyleButton*/
+#buttons {
+    width: 55%;
+    text-align: center;
+}
+
+#benchmarkContainer button {
+    background-color: rgba(196, 190, 190, 0.178);
+    border: 0.2em solid rgba(221, 221, 221, 0.658);
+    border-style: outset;
+    border-radius: 30px;
+    color: white;
+    margin: 15px;
+    width: 18em;
+    height: 5em;
+}
+
+button:hover {
+    background-color: #D20094;
+    box-shadow: 0 0 3px 3px #D20094;
+}
+
+/*positionProgress*/
+#progress {
+    width: fit-content;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+/*ColorProgress*/
+#violet {
+    color: rgba(255, 0, 0, 0.575);
+}
+
+/*SVG Timer*/
+#app {
+    width: 5%;
+    display: inline-block;
+}
+
+#top {
+    position: absolute;
+    font-size: 25px;
+    top: -30px;
+
+}
+
+#botton {
+    position: absolute;
+    font-size: 16px;
+    top: 50px;
+
+}
+
+.base-timer {
+
+    right: 10%;
+    width: 10em;
+    height: 10em;
+}
+
+.base-timer__svg {
+    transform: scaleX(-1);
+}
+
+.base-timer__circle {
+
+    fill: none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 8px;
+    stroke: grey;
+}
+
+.base-timer__path-remaining {
+    stroke-width: 10px;
+    stroke-linecap: round;
+    transform: scaleY(-1) rotate(265deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+    color: rgb(187, 17, 209);
+}
+
+.base-timer__path-remaining.orange {
+    color: orange;
+}
+
+.base-timer__path-remaining.red {
+    color: red;
+}
+
+.base-timer__label {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    bottom: 2.3em;
+    left: 1.23em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+}
+
+/* RESULTS PAGE */
+/* Header con logo + titolo e sottotitolo*/
+.resultsContainer .main {
+    text-align: center;
+}
+
+.resultsContainer span {
+    display: block;
+}
+
+.resultsContainer .title span {
+    font-size: 1.6em;
+}
+
+/*Sezione centrale con Output grafici*/
+.resultsContainer .output {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.resultsContainer .left,
+.right,
+.center {
+    width: 20%;
+}
+
+.resultsContainer .output .left {
+    text-align: left;
+}
+
+.resultsContainer .output .right {
+    text-align: right;
+}
+
+.resultsContainer .center {
+    width: 350px;
+    height: 350px;
+}
+
+.resultsContainer .outputBoxSmallScreen {
+    display: none;
+}
+
+/*Grafico a ciambella*/
+.resultsContainer .donutBg,
+.donut {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: radial-gradient(transparent 0% 46%, rgba(0, 0, 0, 0.5) 50%, #00ffff 50% 100%);
+    border-radius: 50%;
+    box-shadow: 0px 0px 40px 0px #00000075;
+}
+
+.resultsContainer .donut {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultsContainer .donut::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(transparent 0% 50%, #d20094 50%);
+    mask: conic-gradient(#00ffff 0% calc(var(--percentage)*1%), transparent calc(var(--percentage)*1%) 0%);
+    -webkit-mask: conic-gradient(#00ffff 0% calc(var(--percentage)*1%), transparent calc(var(--percentage)*1%) 0%);
+    border-radius: 50%;
+}
+
+.resultsContainer .innerDonutDiv,
+.innerDonutDivSmallScreen {
+    width: 60%;
+    position: absolute;
+}
+
+.resultsContainer .innerDonutDivSmallScreen {
+    display: none;
+}
+
+.resultsContainer .innerDonut1 span {
+    color: #00ffff;
+}
+
+.resultsContainer .innerDonut1 {
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.resultsContainer .innerDonut2 {
+    font-size: 0.8em;
+}
+
+/* FEEDBACK PAGE */
+#feedbackDiv {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+#feedbackDiv p {
+    font-size: 30px;
+}
+
+.star {
+    margin: 0 auto;
+    margin-right: 5px;
+    padding-bottom: 10px;
+    filter: brightness(0);
+    display: inline;
+}
+
+#feedbackInput {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: white;
+    outline: none;
+    background: transparent;
+    border: none;
+    width: 90%;
+    padding: 0.5em;
+}
+
+#feedbackFooter {
+    border-top: solid #900080; 
+    padding-top: 46px;
+}
+
+/* Benchamrk */
+@media screen and (max-width: 600px) {
+
+    #buttons {
+        width: fit-content;
+
+    }
+}
+
+/* RESULTS PAGE */
+@media screen and (max-width: 1280px) {
+
+    .resultsContainer .innerDonutDiv,
+    .left,
+    .right {
+        display: none;
+    }
+
+    .resultsContainer .output {
+        flex-direction: column;
+    }
+
+    .resultsContainer .innerDonutDivSmallScreen {
+        display: initial;
+    }
+
+    .resultsContainer .innerDonutDivSmallScreen h2:first-of-type {
+        font-size: 2em;
+    }
+
+    .resultsContainer .outputBoxSmallScreen {
+        display: initial;
+    }
+
+    .resultsContainer .outerDonut1 span {
+        color: #00ffff;
+    }
+}
+
+/* 404 PAGE */
+#wrap404 main, #wrap404 footer {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#wrap404 main img {
+    width: 60%;
+}
+
+#wrap404 h1 {
+    font-size: 2.5em;
+}
+
+#wrap404 h2 {
+    font-size: 1.5em;
+}
+
+#wrap404 a {
+    color: white;
+}
+
+#wrap404 a:visited {
+    color: rgb(160, 160, 160);
+}
