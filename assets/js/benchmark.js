@@ -7,6 +7,7 @@ var initPage = async () => {
       
     } catch (error) {
         console.error(error);
+        console.log('pluto');
     }
 }
 
