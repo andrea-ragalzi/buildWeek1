@@ -56,6 +56,11 @@ var endQuiz = () => {
 }
 
 var selectQuestions = (difficulty) => {
+    if (difficulty === 'medium') {
+        let easyQuestions = shuffle(selectQuestions('easy')).slice(0, 5);
+        let hardQuestions = shuffle(selectQuestions('hard')).slice(0, 5);
+        return shuffle(easyQuestions.concat(hardQuestions));
+    }
     return questions.filter((question) => question.difficulty === difficulty);
 }
 
