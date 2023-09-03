@@ -14,7 +14,7 @@ body {
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
     color: white;
-    background-image: url(/assets/img/bg.jpg);
+    background-image: url(/resources/img/bg.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

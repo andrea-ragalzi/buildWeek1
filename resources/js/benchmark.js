@@ -96,7 +96,7 @@ var shuffle = (array) => {
     return array;
 }
 
-const QUESTION_FILENAME = './assets/json/questions.json';
+const QUESTION_FILENAME = './resources/data/questions.json';
 const questionElem = document.getElementById('question');
 const buttonsElem = document.getElementById('buttons');
 const progressElem = document.getElementById('progress');
